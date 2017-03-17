@@ -160,10 +160,10 @@
 
     cursor: pointer;
 
-    color: transparent;
+    color: black;
     border: 0;
     outline: none;
-    background: transparent;
+    background: black;
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus
