@@ -2,9 +2,9 @@
 	<html>
 		<head>
 			<title>{{ page.title }}</title>
+			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
 			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/slick-master/slick/slick.css"/>
 			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/slick-master/slick/slick-theme.css"/>
-			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
 		</head>
 		<body>
 			<nav>
@@ -31,12 +31,7 @@
 			<script type="text/javascript" src="{{ site.baseurl }}/slick-master/slick/slick.min.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function(){
-					$('.carousel').slick({
-					  slidesToShow: 3,
-					  slidesToScroll: 1,
-					  autoplay: true,
-					  autoplaySpeed: 2000,
-					});
+					$('.single-item').slick();
 					confirm('hello')
 				});
 			 </script>
