@@ -2,3 +2,4 @@ name: Justin Mi
 theme: jekyll-theme-dinky
 baseurl: /JustinMi.github.io
 permalink: /blog/:year/:month/:day/:title
+permalink: /404.html
