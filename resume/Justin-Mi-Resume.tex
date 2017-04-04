@@ -2,11 +2,15 @@
 % Preamble
 \documentclass[11pt,letterpaper]{article}
 \usepackage[margin=0.65in]{geometry}
-\usepackage{tabto,setspace,fancyhdr}
+\usepackage{tabto,setspace,fancyhdr,enumitem}
 \voffset -0.25in % top margins
 \setlength\parindent{0pt} % no indent
 \setlength{\tabcolsep}{0in} % fully left-aligns the tables
 \setstretch{1.05}
+
+% sets the font to Helvetica
+% \renewcommand{\familydefault}{\sfdefault{phv}} 
+% \renewcommand*\familydefault{phv}
 
 % fancyhdr stuff
 \pagestyle{fancy}
@@ -14,10 +18,16 @@
 \fancyhf{} % removes header
 %\raggedright
 
-\newcommand{\bulletpoint}{\rule{0cm}{1pt}$\bullet$  }
+\setlist[itemize,1] % settings for bullet point lists
+    {
+    leftmargin=*,
+    labelindent=6mm,
+    labelsep=3mm,
+    nosep % no vertical spacing
+    }
 \newenvironment{topic}[1]
     {
-    \large #1
+    {\Large \centerline{#1}}
     \vspace*{0.03in}
     \hrule 
     \vspace*{0.05in}
@@ -56,14 +66,14 @@
     %% HEADER %%
     \begin{head}
                            & \huge{\textbf{\sc{Justin Mi}}} \\
-    justin.mi@berkeley.edu & https://github.com/JustinMi & Mobile: (408) 896-0496 \\
-    \end{head}
+    justin.mi@berkeley.edu  & github.com/JustinMi & linkedin.com/in/justin-mi \\
+    \end{head} \vspace*{0.1in}
 
 
 
 
 
-    %% EDUCATION
+    %% EDUCATION 
     \begin{topic}{Education}
         \begin{event}
             \textbf{University of California, Berkeley} & Berkeley, CA \\
@@ -84,26 +94,26 @@
         % BIDS
         \begin{event}
             \textbf{Berkeley Institute for Data Science} & Berkeley, CA \\
-            \emph{Undergraduate Researcher -- Machine Learning} & \emph{September 2016 to Present} \\
+            \emph{Software Engineer} & \emph{September 2016 to Present} \\
         \end{event}
-            \begin{detail}
-                \bulletpoint Used machine learning (clustering, random forest, regression, PCA) to identify traits of invasive species\\
-                \bulletpoint Classified 3000 species using machine learning, reducing need for expert analysis and manual classification \\
-                \bulletpoint Achieved a classification accuracy of 87\% for at-risk plants in the US, Australia, and the Pacific islands \\
-                \bulletpoint Integrated the ML model with an interactive web front end to simplify and visualize the classification process            
-            \end{detail}
-        \vspace*{-0.1in}
+            \begin{itemize}
+                \item Used machine learning (clustering, random forest, regression, PCA) to identify traits of invasive species
+                \item Built webapp using Django to allow users to upload their own datasets and use the ML model
+                \item Worked on full stack using CSS, HTML, Python, jQuery, ajax, REST to create web app 
+                \item Classified 3000 species, achieved a classification accuracy of 87\% for at-risk plants
+            \end{itemize}
+        \vspace*{0.1in}
 
         % AutoLab
         \begin{event}
             \textbf{Berkeley Laboratory for Automation} & Berkeley, CA \\
             \emph{Linux Systems Administrator \& Web Developer} & \emph{February 2017 to Present}
         \end{event}
-            \begin{detail}
-                \bulletpoint Worked under Prof. Ken Goldberg to maintain 28 AUTOLAB websites and web projects on a private server
-                \bulletpoint Used Linux, Apache, MySQL, and PHP (LAMP) to maintain websites  \\
-                \bulletpoint Assisted with basic networking, IP configuration, SSH, and network security
-            \end{detail}
+            \begin{itemize}
+                \item Worked under Prof. Ken Goldberg to maintain 28 websites and web projects on a web server
+                \item Used Linux, Apache, MySQL, PHP (LAMP) to maintain websites, built 2 websites using WordPress
+                \item Worked with basic networking, IP configuration, SSH, and network security
+            \end{itemize}
         \vspace*{0.1in}
 
         % B@B
@@ -111,12 +121,12 @@
             \textbf{Blockchain@Berkeley} & Berkeley, CA \\
             \emph{Software Developer -- Blockchain} & \emph{November 2016 to February 2017}
         \end{event}
-            \begin{detail}
-                \bulletpoint Developed blockchain for supply chain and shared economy solutions using Ethereum for Airbus and Ford \\
-                \bulletpoint Used Ethereum to develop a blockchain accounting system that prevents financial fraud in large corporations
-            \end{detail}
+            \begin{itemize}
+                \item Developed supply chain and shared economy blockchain solutions using Ethereum for Airbus and Ford
+                \item Used Ethereum to develop a blockchain accounting system that prevents financial fraud in corporations
+            \end{itemize}
         
-    \end{topic} \vspace*{-0.1in}
+    \end{topic} \vspace*{0.1in}
 
 
 
@@ -125,53 +135,57 @@
 
     %% PROJECTS %%
     \begin{topic}{Projects}
+        % Pablo
+        \begin{event}
+        \textbf{Pablo, The Messenger Bot}
+        \end{event}
+            \begin{itemize}
+                \item A Facebook Messenger bot that allows users to have anonymous conversations with others through it
+                \item Deployed on DigitalOcean virtual server, used Ruby and Rails as language and framework
+                \item Used Facebook API to integrate Ruby backend with webhook 
+                \item Wrote algorithm that made calls to access users based on unique IDs and pair them pseudorandomly
+                \item Allows administrators to mass-send casual updates to all bot subscribers
+                \item Syncs with a user's weekly schedule to automatically send individualized reminders about events
+            \end{itemize}
+
         % Dorm Ex Machina
         \begin{event}
             \textbf{Dorm Ex Machina} & \emph{Github: git.io/vyfyf}
         \end{event}
-            \begin{detail}
-                \bulletpoint Arduino robotic system that uses RFID and Bluetooth to track whether a user has forgotten their belongings \\
-                \bulletpoint Created a "Find My iPhone"-like app as a hub for the user to retrieve forgotten belongings. \\
-                \bulletpoint Won 1st place in Robotics@Berkeley's 2016 invention competition
-
-            \end{detail}
+            \begin{itemize}
+                \item Arduino system that uses RFID and Bluetooth to track whether a user has forgotten their belongings
+                \item Created a "Find My iPhone"-like app as a hub for the user to retrieve forgotten belongings
+                \item Won 1st place in Robotics@Berkeley's 2016 invention competition. Video: bit.ly/2fYhVmH
+            \end{itemize}
 
         % Yelp Maps
         \begin{event}
         \textbf{Where to Eat} & \emph{Github: git.io/vyfyR}
         \end{event}
-            \begin{detail}
-                \bulletpoint Uses machine learning and the Yelp academic dataset to predict favorite restaurants, shows visualization. \\
-                \bulletpoint Used statistical techniques to predict user ratings for similar restaurants based on previous ratings.
-                %\bulletpoint Used k-means clustering and a Voronoi diagram to visually group restaurants based on common features. 
-            \end{detail}
+            \begin{itemize}
+                \item Uses machine learning and the Yelp academic dataset to predict favorite restaurants, shows visualization
+                \item Used k-means clustering and a Voronoi diagram to visually group restaurants based on common features
+                \item Predicted user ratings for similar restaurants based on previous ratings
+            \end{itemize}
 
-        % Pablo
-        \begin{event}
-        \textbf{Pablo}
-        \end{event}
-            \begin{detail}
-                \bulletpoint A Facebook Messenger bot that allows club officers to mass-send casual updates to all bot subscribers. \\
-                \bulletpoint Syncs with a user's weekly schedule to automatically send individualized reminders about events. \\
-                \bulletpoint Can coordinate and suggest solutions if there are scheduling conflicts.  
-            \end{detail}
+        
     \end{topic} \vspace*{0.1in}
 
 
 
 
 
-    %% ACTIVITIES %%
-    \begin{topic}{Activities}
-        % Lab TA
-        \begin{event}
-            \textbf{CS 61a} -- \emph{Lab TA} & Berkeley, CA. \emph{January 2017 to Present}
-        \end{event}
-            \begin{detail}
-                \bulletpoint Provided tutoring and homework assistance in weekly labs for 30 students in Berkeley's intro CS course\\
-                \bulletpoint Held weekly office hours to help 5-10 students on homework, lab, and projects
-            \end{detail} 
-    \end{topic} \vspace*{0.1in}
+    % %% ACTIVITIES %%
+    % \begin{topic}{Activities}
+    %     % Lab TA
+    %     \begin{event}
+    %         \textbf{CS 61a} -- \emph{Lab TA} & Berkeley, CA. \emph{January 2017 to Present}
+    %     \end{event}
+    %         \begin{itemize}
+    %             \item Provided tutoring and homework assistance in weekly labs for 30 students in Berkeley's intro CS course
+    %             \item Held weekly office hours to help 5-10 students on homeworks, labs, and projects
+    %         \end{itemize} 
+    % \end{topic} \vspace*{0.1in}
 
 
 
@@ -180,7 +194,7 @@
     %% SKILLS AND QUALIFICATIONS %%
     \begin{topic}{Skills and Qualifications}
         \begin{detail}
-            \textbf{Experienced} -- Python, Java, Ruby, Rails, HTML, CSS, Javascript, SQL, LaTeX, Git, Django, AngularJS, jQuery, Node.js, Scheme, CAD, Mandarin Chinese\\
+            \textbf{Experienced} -- Python, Java, Ruby, Rails, HTML, CSS, Javascript, SQL, LaTeX, Git, Django, jQuery, Node.js, MongoDB, AngularJS, PHP, LAMP stack, MEAN stack, Mandarin Chinese\\
             \textbf{Proficient} -- PostgreSQL, Lisp, Ethereum, Solidity, LabVIEW
         \end{detail}
     \end{topic}

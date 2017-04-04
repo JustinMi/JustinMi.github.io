@@ -1,0 +1,188 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{tabto,setspace,fancyhdr}
+\voffset -0.25in % top margins
+\setlength\parindent{0pt} % no indent
+\setlength{\tabcolsep}{0in} % fully left-aligns the tables
+\setstretch{1.05}
+
+% fancyhdr stuff
+\pagestyle{fancy}
+\rhead{\thepage}
+\fancyhf{} % removes header
+%\raggedright
+
+\newcommand{\bulletpoint}{\rule{0cm}{2pt}$\bullet$  }
+\newenvironment{topic}[1]
+    {
+    \tabto{225pt}
+    \large #1
+    \vspace*{0.03in}
+    \hrule 
+    \vspace*{0.05in}
+    }
+    {
+    }
+\newenvironment{event}
+    {
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    }
+    {
+    \end{tabular*}
+    }
+\newenvironment{detail}
+    {
+    \normalsize
+    }
+    {
+    \vspace*{0.02in}
+    }
+\newenvironment{head}
+    {
+    \begin{center}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l c r}
+    }
+    {
+    \hline
+    \hline
+    \end{tabular*}
+    \end{center}
+    }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+    %% HEADER %%
+    \begin{head}
+                           & \huge{\textbf{\sc{Justin Mi}}} \\
+    justin.mi@berkeley.edu & github.com/JustinMi & linkedin.com/in/justin-mi \\
+    \end{head}
+
+
+
+
+
+    %% EDUCATION 
+    \begin{topic}{Education}
+        \begin{event}
+            \textbf{University of California, Berkeley} & Berkeley, CA \\
+            \emph{BS, Electrical Engineering and Computer Science (EECS)} & \emph{August 2016 to May 2020}        
+        \end{event}
+            \begin{detail}
+                Coursework: Data Structures, Discrete Mathematics, Probability Theory,  Linear Algebra, Differential Equations, Introduction to CS, Designing Information Systems and Devices, Multivariable Calculus            
+            \end{detail}
+    \end{topic} \vspace*{0.1in}
+
+
+
+
+
+
+    %% EXPERIENCE %%
+    \begin{topic}{Experience}
+        % BIDS
+        \begin{event}
+            \textbf{Berkeley Institute for Data Science} & Berkeley, CA \\
+            \emph{Software Developer -- Machine Learning} & \emph{September 2016 to Present} \\
+        \end{event}
+            \begin{detail}
+                \bulletpoint Built webapp using Django to allow users to upload their own datasets and use the model \\
+                \bulletpoint Worked on full stack using CSS, HTML, jQuery, ajax, REST to create web app \\
+                \bulletpoint Used machine learning (clustering, random forest, regression, PCA) to identify traits of invasive species\\
+                \bulletpoint Classified 3000 species using machine learning; achieved a classification accuracy of 87\% for at-risk plants, reducing need for expert analysis and manual classification \\
+            \end{detail}
+        \vspace*{-0.1in}
+
+        % AutoLab
+        \begin{event}
+            \textbf{Berkeley Laboratory for Automation} & Berkeley, CA \\
+            \emph{Linux Systems Administrator \& Web Developer} & \emph{February 2017 to Present}
+        \end{event}
+            \begin{detail}
+                \bulletpoint Worked under Prof. Ken Goldberg to maintain 28 AUTOLAB websites and web projects on a private server \\
+                \bulletpoint Used Linux, Apache, MySQL, and PHP (LAMP) to maintain websites, built 2 new websites using WordPress  \\
+                \bulletpoint Assisted with basic networking, IP configuration, SSH, and network security
+            \end{detail}
+        \vspace*{0.1in}
+        
+    \end{topic} \vspace*{-0.1in}
+
+
+
+
+
+
+    %% PROJECTS %%
+    \begin{topic}{Projects}
+        % Pablo
+        \begin{event}
+        \textbf{Pablo}
+        \end{event}
+            \begin{detail}
+                \bulletpoint Built a Facebook Messenger bot using Ruby and Rails that allows users to have anonymous conversations with other users through it \\
+                \bulletpoint Deployed on DigitalOcean virtual server \\
+                \bulletpoint Worked with Facebook API to integrate Ruby backend to webhook \\
+                \bulletpoint Wrote API that made calls to access users based on unique IDs \\
+                \bulletpoint Wrote algorithm to pair users up pseudorandomly, preventing repeated pairings. \\
+                \bulletpoint Allow club officers to mass-send messages to all bot subscribers. \\
+                \bulletpoint Syncs with a user's weekly schedule to automatically send individualized reminders about events.
+            \end{detail}
+
+        %% add youtube link
+        %% indent the bullet points
+        % Dorm Ex Machina
+        \begin{event}
+            \textbf{Dorm Ex Machina} & \emph{Github: git.io/vyfyf}
+        \end{event}
+            \begin{detail}
+                \bulletpoint Arduino robotic system that uses RFID and Bluetooth to track whether a user has forgotten their belongings \\
+                \bulletpoint Created a "Find My iPhone"-like app as a hub for the user to retrieve forgotten belongings. \\
+                \bulletpoint Won 1st place in Robotics@Berkeley's 2016 invention competition
+            \end{detail}
+
+        % Yelp Maps
+        \begin{event}
+        \textbf{Where to Eat} & \emph{Github: git.io/vyfyR}
+        \end{event}
+            \begin{detail}
+                \bulletpoint Uses k-means clustering, a Voronoi diagram, and the Yelp academic dataset to predict favorite restaurants, shows visualization. \\
+                \bulletpoint Used statistical techniques to predict user ratings for similar restaurants based on previous ratings.
+            \end{detail}
+
+    \end{topic} \vspace*{0.1in}
+
+
+
+
+
+    %% ACTIVITIES %%
+    \begin{topic}{Activities}
+        % Lab TA
+        \begin{event}
+            \textbf{CS 61a} -- \emph{Lab TA} & Berkeley, CA. \emph{January 2017 to Present}
+        \end{event}
+            \begin{detail}
+                \bulletpoint Provided tutoring and homework assistance in weekly labs for 30 students in Berkeley's intro CS course\\
+                \bulletpoint Held weekly office hours to help 5-10 students on homeworks, labs, and projects
+            \end{detail} 
+    \end{topic} \vspace*{0.1in}
+
+
+
+
+
+    %% SKILLS AND QUALIFICATIONS %%
+    \begin{topic}{Skills and Qualifications}
+        \begin{detail}
+            \textbf{Experienced} -- Python, Java, Ruby, Rails, HTML, CSS, Javascript, SQL, LaTeX, Git, Django, jQuery, Node.js, MongoDB, AngularJS, PHP, LAMP stack, MEAN stack, Mandarin Chinese\\
+            \textbf{Proficient} -- PostgreSQL, Lisp, Ethereum, Solidity, LabVIEW
+        \end{detail}
+    \end{topic}
+
+    %% systems and network administrator at autolab
+    %% robot flame war
+
+\end{document}
