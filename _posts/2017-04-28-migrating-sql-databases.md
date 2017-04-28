@@ -21,9 +21,9 @@ This tutorial will explain how to migrate a Django application running SQLite to
 ## Step 1: Downloading and Setting Up MySQL
 _You can skip this step if you already have MySQL set up on your computer._
 1. Download and set up MySQL using [instructions here:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html)
-    a. I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR: 
-    b. Once MySQL is installed, [set up a launch daemon that allows MySQL to start up on system/terminal launch:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html)
-    c. Try running `mysql` in terminal. You might get an error like "command not found". If so, configure your computer's $PATH so it recognizes mysql as an exectutable:  
+    1. I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR: 
+    2. Once MySQL is installed, [set up a launch daemon that allows MySQL to start up on system/terminal launch:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html)
+    3. Try running `mysql` in terminal. You might get an error like "command not found". If so, configure your computer's $PATH so it recognizes mysql as an exectutable:  
     ```shell
     $ export PATH=$PATH:/path/to/your/mysql/bin
     ```  
@@ -32,7 +32,7 @@ _You can skip this step if you already have MySQL set up on your computer._
     $ export PATH=$PATH:/usr/local/mysql/bin
     ```  
     Check and make sure that your terminal recognizes `mysql` now. You might still get a MySQL specific error, but that's okay--we will fix that soon. 
-    d. Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow the `mysql` to be a recognizable command every time, we will edit your computer's bash profile:  
+    4. Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow the `mysql` to be a recognizable command every time, we will edit your computer's bash profile:  
     ```shell
     $ nano ~/.bash_profile
     ```  
