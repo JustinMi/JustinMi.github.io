@@ -41,34 +41,15 @@ Unfortunately, this fix only works temporarily. If you open a new terminal tab, 
     $ nano ~/.bash_profile
     ```  
 In the file, copy-paste this:  
-    ```
-    # Set architecture flags
-    ```
- 
-    ```
-    export ARCHFLAGS="-arch x86_64"
-    ```
-  
+```
+# Set architecture flags
+export ARCHFLAGS="-arch x86_64"
+# Ensure user-installed binaries take precedence  
+export PATH=/usr/local/mysql/bin:$PATH  
+# Load .bashrc if it exists  
+test -f ~/.bashrc && source ~/.bashrc  
+``` 
 
-    ```
-    # Ensure user-installed binaries take precedence  
-    ```
-  
-
-    ```
-    export PATH=/usr/local/mysql/bin:$PATH  
-    ```
-  
-
-    ```
-    # Load .bashrc if it exists  
-    ```
-   
-
-    ```
-    test -f ~/.bashrc && source ~/.bashrc  
-    ``` 
-    
 The above code allows `mysql` to be recognized every time. Save the file, restart terminal, and it should work.  
 
 
