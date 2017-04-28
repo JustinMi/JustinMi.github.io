@@ -1,4 +1,4 @@
 name: Justin Mi
-theme: Slate
+theme: jekyll-theme-slate
 baseurl: /JustinMi.github.io
 permalink: /blog/:year/:month/:day/:title
