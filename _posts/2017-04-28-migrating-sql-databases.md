@@ -35,24 +35,7 @@ For me, the command was was
 Check and make sure that your terminal recognizes `mysql` now. You might still get a MySQL specific error, but that's okay--we will fix that in the next steps. 
 
 
-Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow `mysql` to be a recognizable command every time, we will edit your computer's bash profile. Open the bash profile:
-
+Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow `mysql` to be a recognizable command every time, we will edit your computer's bash profile. Open the bash profile:  
     ```shell
     $ nano ~/.bash_profile
     ```  
-In the file, copy-paste this:  
-    ```shell
-    # Set architecture flags
-    export ARCHFLAGS="-arch x86_64"
-    # Ensure user-installed binaries take precedence
-    export PATH=/usr/local/mysql/bin:$PATH
-    # Load .bashrc if it exists
-    test -f ~/.bashrc && source ~/.bashrc
-    ```  
-The above code allows `mysql` to be recognized every time. Save the file, restart terminal, and it should work. 
-
-## Step 2: Creating MySQL Users
-Now we are ready to use MySQL! Enter
-        ```
-        $ mysql -u root -p
-        ```
