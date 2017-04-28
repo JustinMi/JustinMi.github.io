@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 APR 2017 00:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 APR 2017 11:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -82,18 +82,18 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 (./Justin-Mi-Resume.aux)
 \openout1 = `Justin-Mi-Resume.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -130,18 +130,18 @@ LaTeX Font Info:    ... okay on input line 63.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 67.
+(Font)              <10.95> on input line 69.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 67.
+(Font)              <8> on input line 69.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 67.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 100.
+(Font)              <6> on input line 69.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -149,11 +149,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 Here is how much of TeX's memory you used:
  1237 strings out of 493014
  17774 string characters out of 6133351
- 85936 words of memory out of 5000000
+ 84936 words of memory out of 5000000
  4815 multiletter control sequences out of 15000+600000
  8238 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 24i,10n,43p,248b,239s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 24i,10n,43p,257b,239s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
@@ -161,7 +161,7 @@ c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 msfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti10.pfb>
-Output written on Justin-Mi-Resume.pdf (1 page, 89975 bytes).
+Output written on Justin-Mi-Resume.pdf (1 page, 90395 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
