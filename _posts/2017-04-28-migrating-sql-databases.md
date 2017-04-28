@@ -13,14 +13,18 @@ This is where MySQL comes in--it is the most popular large-scale database manage
 
 This tutorial will explain how to migrate a Django application running SQLite to MySQL, from the ground up. 
 
-## Prerequisites/Assumptions: 
+### Prerequisites/Assumptions: 
 * You are using OS X
 * Your webapp is using Django 1.10.x
 * You have an existing database in SQLite
 
 ## Step 1: Downloading and Setting Up MySQL
 _You can skip this step if you already have MySQL set up on your computer._
-First, we will download and set up MySQL using [instructions here:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html). I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). Try running `mysql` in terminal. You might get an error like "command not found". If so, in terminal, configure your computer's `$PATH` so it recognizes `mysql` as an exectutable:  
+
+
+First, we will download and set up MySQL using [instructions here:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html). I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html) 
+
+Try running `mysql` in terminal. You might get an error like "command not found". If so, in terminal, configure your computer's `$PATH` so it recognizes `mysql` as an exectutable:  
     ```shell
     $ export PATH=$PATH:/path/to/your/mysql/bin
     ```  
