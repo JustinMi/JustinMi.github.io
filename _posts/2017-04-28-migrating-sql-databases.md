@@ -24,9 +24,6 @@ _You can skip this step if you already have MySQL set up on your computer._
     1. I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR: 
     2. Once MySQL is installed, [set up a launch daemon that allows MySQL to start up on system/terminal launch:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html)
     3. Try running `mysql` in terminal. You might get an error like "command not found". If so, configure your computer's $PATH so it recognizes mysql as an exectutable:  
-    ```shell
-    $ export PATH=$PATH:/path/to/your/mysql/bin
-    ```  
     For me, it was  
     ```shell
     $ export PATH=$PATH:/usr/local/mysql/bin
@@ -45,4 +42,8 @@ _You can skip this step if you already have MySQL set up on your computer._
     # Load .bashrc if it exists
     test -f ~/.bashrc && source ~/.bashrc
     ```  
-    The above code allows `mysql' to be recognized recog every time. Save the file, restart terminal, and it should work. 
+    The above code allows `mysql` to be recognized every time. Save the file, restart terminal, and it should work. 
+    5. Now we are ready to use MySQL! Enter
+        ```
+        $ mysql -u root -p
+        ```
