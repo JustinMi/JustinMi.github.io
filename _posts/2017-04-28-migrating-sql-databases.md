@@ -24,24 +24,27 @@ _You can skip this step if you already have MySQL set up on your computer._
     1. I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR: 
     2. Once MySQL is installed, [set up a launch daemon that allows MySQL to start up on system/terminal launch:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html)
     3. Try running `mysql` in terminal. You might get an error like "command not found". If so, configure your computer's $PATH so it recognizes mysql as an exectutable:  
-    For me, it was  
-    ```shell
-    $ export PATH=$PATH:/usr/local/mysql/bin
-    ```  
-    Check and make sure that your terminal recognizes `mysql` now. You might still get a MySQL specific error, but that's okay--we will fix that soon. 
+        ```shell
+        $ export PATH=$PATH:/path/to/your/mysql/bin
+        ```  
+            For me, it was  
+        ```shell
+        $ export PATH=$PATH:/usr/local/mysql/bin
+        ```  
+    Check and make sure that your terminal recognizes `mysql` now. You might still get a MySQL specific error, but that's okay--we will fix that in the next steps. 
     4. Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow the `mysql` to be a recognizable command every time, we will edit your computer's bash profile:  
-    ```shell
-    $ nano ~/.bash_profile
-    ```  
-    In the file, copy-paste this:  
-    ```shell
-    # Set architecture flags
-    export ARCHFLAGS="-arch x86_64"
-    # Ensure user-installed binaries take precedence
-    export PATH=/usr/local/mysql/bin:$PATH
-    # Load .bashrc if it exists
-    test -f ~/.bashrc && source ~/.bashrc
-    ```  
+        ```shell
+        $ nano ~/.bash_profile
+        ```  
+            In the file, copy-paste this:  
+        ```shell
+        # Set architecture flags
+        export ARCHFLAGS="-arch x86_64"
+        # Ensure user-installed binaries take precedence
+        export PATH=/usr/local/mysql/bin:$PATH
+        # Load .bashrc if it exists
+        test -f ~/.bashrc && source ~/.bashrc
+        ```  
     The above code allows `mysql` to be recognized every time. Save the file, restart terminal, and it should work. 
     5. Now we are ready to use MySQL! Enter
         ```
