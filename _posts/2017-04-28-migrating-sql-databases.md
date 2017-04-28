@@ -33,14 +33,15 @@ _You can skip this step if you already have MySQL set up on your computer._
         ```shell
         $ export PATH=$PATH:/usr/local/mysql/bin
         ```  
-    Check and make sure that your terminal recognizes `mysql` now. You might still get a MySQL specific error, but that's okay--we will fix that in the next steps. 
+
+            Check and make sure that your terminal recognizes `mysql` now. You might still get a MySQL specific error, but that's okay--we will fix that in the next steps. 
     4. Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow the `mysql` to be a recognizable command every time, we will edit your computer's bash profile:  
         ```shell
         $ nano ~/.bash_profile
         ```  
 
             In the file, copy-paste this:  
-            
+
             ```shell
             # Set architecture flags
             export ARCHFLAGS="-arch x86_64"
