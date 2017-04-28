@@ -27,7 +27,9 @@ _You can skip this step if you already have MySQL set up on your computer._
         ```shell
         $ export PATH=$PATH:/path/to/your/mysql/bin
         ```  
-        For me, it was  
+        
+            For me, it was  
+            
         ```shell
         $ export PATH=$PATH:/usr/local/mysql/bin
         ```  
