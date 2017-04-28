@@ -27,7 +27,7 @@ _You can skip this step if you already have MySQL set up on your computer._
         ```shell
         $ export PATH=$PATH:/path/to/your/mysql/bin
         ```  
-            For me, it was  
+        For me, it was  
         ```shell
         $ export PATH=$PATH:/usr/local/mysql/bin
         ```  
@@ -36,7 +36,7 @@ _You can skip this step if you already have MySQL set up on your computer._
         ```shell
         $ nano ~/.bash_profile
         ```  
-            In the file, copy-paste this:  
+        In the file, copy-paste this:  
         ```shell
         # Set architecture flags
         export ARCHFLAGS="-arch x86_64"
