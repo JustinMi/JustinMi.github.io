@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "First Blog Post"
-date: 2017-03-15
+title: "Migrating SQLite Databases to MySQL (Django)"
+date: 2017-04-28
 ---
 
 # Intro
