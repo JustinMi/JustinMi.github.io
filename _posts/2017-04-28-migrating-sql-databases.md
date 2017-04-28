@@ -29,7 +29,7 @@ _You can skip this step if you already have MySQL set up on your computer._
         ```  
         
             For me, it was  
-            
+
         ```shell
         $ export PATH=$PATH:/usr/local/mysql/bin
         ```  
@@ -38,15 +38,17 @@ _You can skip this step if you already have MySQL set up on your computer._
         ```shell
         $ nano ~/.bash_profile
         ```  
-        In the file, copy-paste this:  
-        ```shell
-        # Set architecture flags
-        export ARCHFLAGS="-arch x86_64"
-        # Ensure user-installed binaries take precedence
-        export PATH=/usr/local/mysql/bin:$PATH
-        # Load .bashrc if it exists
-        test -f ~/.bashrc && source ~/.bashrc
-        ```  
+
+            In the file, copy-paste this:  
+            
+            ```shell
+            # Set architecture flags
+            export ARCHFLAGS="-arch x86_64"
+            # Ensure user-installed binaries take precedence
+            export PATH=/usr/local/mysql/bin:$PATH
+            # Load .bashrc if it exists
+            test -f ~/.bashrc && source ~/.bashrc
+            ```  
     The above code allows `mysql` to be recognized every time. Save the file, restart terminal, and it should work. 
     5. Now we are ready to use MySQL! Enter
         ```
