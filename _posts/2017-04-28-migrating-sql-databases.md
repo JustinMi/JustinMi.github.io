@@ -26,20 +26,20 @@ First, we will download and set up MySQL using [instructions here.](https://dev.
 
 
 Try running `mysql` in terminal. You might get an error like "command not found". If so, in terminal, configure your computer's `$PATH` so it recognizes `mysql` as an exectutable:  
-    ```
-    $ export PATH=$PATH:/path/to/your/mysql/bin
-    ```  
+```shell
+$ export PATH=$PATH:/path/to/your/mysql/bin
+```  
 For me, the command was was  
-    ```
-    $ export PATH=$PATH:/usr/local/mysql/bin
-    ```  
+```
+$ export PATH=$PATH:/usr/local/mysql/bin
+```  
 Check and make sure that your terminal recognizes `mysql` now. You might still get a MySQL specific error, but that's okay--we will fix that in the next steps. 
 
 
 Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow `mysql` to be a recognizable command every time, we will edit your computer's bash profile. Open the bash profile:  
-    ```
-    $ nano ~/.bash_profile
-    ```  
+```
+$ nano ~/.bash_profile
+```  
 In the file, copy-paste this:  
 ```
 # Set architecture flags
@@ -55,13 +55,13 @@ The above code allows `mysql` to be recognized every time. Save the file, restar
 
 ## Step 2: Creating MySQL Users
 Now we are ready to use MySQL! Enter
-    ```
-    $ mysql -u root -p
-    ```
+```
+$ mysql -u root -p
+```
 In the MySQL shell, enter
-    ```
-    mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
-    ```
+```
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
+```
 
 
 
