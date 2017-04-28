@@ -4,8 +4,8 @@ title: "Migrating SQLite Databases to MySQL (Django)"
 date: 2017-04-28
 ---
 
-Intro
-=========
+## Intro
+
 
 SQLite is a great RDBMS that often comes "pre-installed" with many applications. It's main selling point is that the entire database is stored in a single file on the disk, making SQLite very fast and efficient, without losing any core functionality that many people come to expect from mainstream database management systems. Unfortunately, while SQLite's simple self-contained structure makes it great for the development and test phases of applications, it does not scale well when scaling to a multi-user application. There is no concept of user-management, where multiple clients need to access and use the same database. Changes are made through direct calls to the file holding the database. 
 
@@ -13,14 +13,31 @@ This is where MySQL comes in--it is the most popular large-scale database manage
 
 This tutorial will explain how to migrate a Django application running SQLite to MySQL, from the ground up. 
 
-Prerequisites/Assumptions: 
-==========================
+## Prerequisites/Assumptions: 
 * You are using OS X
 * Your webapp is using Django 1.10.x
 * You have an existing database in SQLite
 
-Step 1: Downloading and Setting Up MySQL
-========================================
+## Step 1: Downloading and Setting Up MySQL
 _You can skip this step if you already have MySQL set up on your computer._
 1. Download and set up MySQL using [instructions here:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html)
     1. I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR: 
+    2. Once MySQL is installed, [set up a launch daemon that allows MySQL to start up on system/terminal launch:](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html)
+    3. Try running `mysql` in terminal. You might get an error like "command not found". If so, configure your computer's $PATH so it recognizes mysql as an exectutable: 
+        ```shell
+        $ export PATH=$PATH:/path/to/your/mysql/bin
+        ```
+        For me, it was
+        ```shell
+        $ export PATH=$PATH:/usr/local/mysql/bin
+        ```
+    4. d. This only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow the `mysql` to be a recognizable command every time, enter:
+        $ nano ~/.bash_profile
+    In the file, copy-paste this:
+        # Set architecture flags
+        export ARCHFLAGS="-arch x86_64"
+        # Ensure user-installed binaries take precedence
+        export PATH=/usr/local/mysql/bin:$PATH
+        # Load .bashrc if it exists
+        test -f ~/.bashrc && source ~/.bashrc
+    The above code allows `mysql' to be recognized recog every time. Save the file, restart terminal, and it should work. 
