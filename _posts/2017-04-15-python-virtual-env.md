@@ -24,8 +24,8 @@ $ conda list --help
 tells you exactly what `conda list` is and how it works. 
 
 # Installing Anaconda
-_If you already have Anaconda installed, you can skip this part_
-Installing Anaconda is relatively painless. Just go to the [website](https://www.continuum.io/downloads) and follow the instructions to download.
+_If you already have Anaconda installed, you can skip this part_  
+Installing Anaconda is relatively painless. Just go to the [website](https://www.continuum.io/downloads) and follow the instructions to download and install.
 
 # Creating Environments
 We will create two environments, so we can practice switching between virtual environments. To create our first environment, type
