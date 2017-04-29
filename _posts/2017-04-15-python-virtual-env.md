@@ -63,7 +63,9 @@ your_environment_name                    /Users/justinmi/anaconda3/envs/python2
 second_environment_name                  /Users/justinmi/anaconda3/envs/python3
 root                                  *  /Users/justinmi/anaconda3
 ```
-This shows that I have 2 environments--one named `your_environment_name` that runs Python 2 and one named `second_environment_name` that runs Python 3. I am currently on my root environment, so there is a `*` next to the root environment directory. If I switch environments, the `*` will switch accordingly. 
+This shows that I have 2 environments--one named `your_environment_name` that runs Python 2 and one named `second_environment_name` that runs Python 3. I am currently on my root environment, so there is a `*` next to the root environment directory. If I switch environments, the `*` will switch accordingly.
+
+-------------
 
 # Switching Environments
 Switching environments is the crux of what makes virtual environments so great. Let's switch to `your_environment_name` first. 
@@ -89,6 +91,8 @@ $ source activate second_environment_name
 ```
 And if we type `python` in the terminal, we will see that now we have the Python 3 interpreter! We can now run programs in Python 3.
 
+-------------
+
 # Working with Packages
 Let's say we want to install the `numpy` package. Let's search for it first, to make sure that it is in the Anaconda index. Type
 ```
@@ -113,12 +117,16 @@ Let's say we want to remove `numpy`. We will just enter
 conda remove numpy
 ```
 
+-------------
+
 # Removing Virtual Environments
 Let's say we don't need `your_environment_name` anymore. We will just type
 ```
 conda remove --name your_environment_name --all
 ``` 
 We can type `conda env list` to double-check.
+
+-------------
 
 # Wrap Up and Summary
 And that's the long and short of it! Hopefully, now you can see why Conda's virtual environment manager is so powerful, and you can switch between projects in Python 2 and Python 3 like a pro! 

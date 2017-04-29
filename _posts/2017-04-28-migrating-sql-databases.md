@@ -18,6 +18,8 @@ This tutorial will explain how to migrate a Django application running SQLite to
 * Your webapp is using Django 1.10.x
 * You have an existing database in SQLite
 
+-------------
+
 # Step 1: Downloading and Setting Up MySQL
 _You can skip this step if you already have MySQL set up on your computer._
 
@@ -51,6 +53,7 @@ test -f ~/.bashrc && source ~/.bashrc
 ``` 
 The above code allows `mysql` to be recognized every time. Save the file, restart terminal, and it should work.  
 
+-------------
 
 # Step 2: Creating MySQL Users
 _NOTE: in this tutorial, we are altering the root user because it is assumed you do not have any other local users on your MySQL server. If you do, change the usernames accordingly_
@@ -77,6 +80,8 @@ and copy-paste this:
 ```
 alias mysql='mysql -u root -p'
 ```
+
+-------------
 
 # Step 3: Changing Django App Settings
 Now, in your terminal, navigate to the root directory of your Django application. Run
@@ -108,6 +113,7 @@ DATABASES = {
 ```
 A reminder that `your_project_name` should be the same name as the database you created in MySQL in Step 2. `your_password` is the same password that you use to log into MySQL. The `HOST` and `PORT` can be empty if you are simply hosting your webapp locally, but if you are running MySQL in a virtual server then fill in your host address and port accordingly. 
 
+-------------
 
 # Step 4: Make Migrations
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
@@ -119,6 +125,8 @@ Finally, when your MySQL database is all set up, load all the data you saved in 
 ```
 $ python manage.py loaddata datadump.json
 ```
+
+-------------
 
 # Step 5: Wrap Up
 And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
