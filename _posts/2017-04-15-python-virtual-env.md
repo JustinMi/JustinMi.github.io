@@ -44,7 +44,7 @@ proceed ([y]/n)?
 ```
 Hit `y`. Then, we will create our second environment. 
 ```
-conda create --name second_environment_name python=3 babel
+$ conda create --name second_environment_name python=3 babel
 ```
 This time, we created an environment in Python 3, with `babel` installed. To explore more commands, type `conda create --help`.
 
@@ -96,25 +96,25 @@ And if we type `python` in the terminal, we will see that now we have the Python
 # Working with Packages
 Let's say we want to install the `numpy` package. Let's search for it first, to make sure that it is in the Anaconda index. Type
 ```
-conda search numpy
+$ conda search numpy
 ```
 You will get a huge list of all the versions of `numpy` you can download. To download it, type
 ```
-conda install numpy
+$ conda install numpy
 ```
 This will install `numpy` on whatever environment you are currently on. To install on a different environment, type
 ```
-conda install --name second_environment_name numpy
+$ conda install --name second_environment_name numpy
 ```
 If you can't find a package through `conda search`, it is likely that Anaconda does not have access to that package. In that case, you can use the `pip` package installer, and it will still install to the current environment. 
 
 To check what packages you currently have installed on your current environment, enter
 ```
-conda list
+$ conda list
 ```
 Let's say we want to remove `numpy`. We will just enter
 ```
-conda remove numpy
+$ conda remove numpy
 ```
 
 -------------
@@ -122,7 +122,7 @@ conda remove numpy
 # Removing Virtual Environments
 Let's say we don't need `your_environment_name` anymore. We will just type
 ```
-conda remove --name your_environment_name --all
+$ conda remove --name your_environment_name --all
 ``` 
 We can type `conda env list` to double-check.
 
