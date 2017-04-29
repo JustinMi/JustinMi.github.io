@@ -80,21 +80,21 @@ alias mysql='mysql -u root -p'
 
 # Step 3: Changing Django App Settings
 Now, in your terminal, navigate to the root directory of your Django application. Run
-```
-python manage.py dumpdata > datadump.json
+```shell
+$ python manage.py dumpdata > datadump.json
 ```
 This will create a dumpfile of the data stored in your SQLite database. Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
-```
-pip install mysql-connector-python
-pip install MySQL-python
+```shell
+$ pip install mysql-connector-python
+$ pip install MySQL-python
 ```
 or
-```
-conda install mysql-connector-python
-conda install MySQL-python
+```shell
+$ conda install mysql-connector-python
+$ conda install MySQL-python
 ```
 Finally, in your `settings.py` file in your app, change the `DATABASES` section to match the following:
-```
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -108,6 +108,20 @@ DATABASES = {
 ```
 A reminder that `your_project_name` should be the same name as the database you created in MySQL in Step 2. `your_password` is the same password that you use to log into MySQL. The `HOST` and `PORT` can be empty if you are simply hosting your webapp locally, but if you are running MySQL in a virtual server then fill in your host address and port accordingly. 
 
+
+# Step 4: Make Migrations
+We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
+```
+$ python manage.py makemigrations
+$ python manage.py migrate --run-syncdb
+```
+Finally, when your MySQL database is all set up, load all the data you saved in the dumpfile in step 3:
+```
+$ python manage.py loaddata datadump.json
+```
+
+# Step 5: Wrap Up
+And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
 
 
 
