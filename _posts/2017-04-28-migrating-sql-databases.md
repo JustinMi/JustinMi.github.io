@@ -123,6 +123,19 @@ $ python manage.py loaddata datadump.json
 # Step 5: Wrap Up
 And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
 
+If you are having trouble, here are some pages that I found helpful when working on this writeup:
+http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql
+
+http://stackoverflow.com/questions/19189813/setting-django-up-to-use-mysql
+
+https://docs.djangoproject.com/en/1.10/ref/databases/#mysql-notes
+
+http://stackoverflow.com/questions/11546151/how-to-make-db-dumpfile-in-django
+
+https://www.digitalocean.com/community/tutorials/how-to-use-mysql-or-mariadb-with-your-django-application-on-ubuntu-14-04
+
+https://docs.djangoproject.com/en/1.11/topics/migrations/
+
 
 
 
