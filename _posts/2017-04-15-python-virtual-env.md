@@ -16,6 +16,8 @@ In this tutorial, we will go over the basics of using Anaconda's environment man
 * You are using OS X
 * You are familiar with the Unix terminal
 
+-------------
+
 # A Note
 This tutorial only goes over the basics of Conda, enough for you to get up and running with your newly-aquired virtual-environment-jitsu skills. However, if you want to explore further, Conda's docs for any command can be accessed with the `--help` tag. For example,
 ```
@@ -23,9 +25,13 @@ $ conda list --help
 ```
 tells you exactly what `conda list` is and how it works. 
 
+-------------
+
 # Installing Anaconda
 _If you already have Anaconda installed, you can skip this part_  
 Installing Anaconda is relatively painless. Just go to the [website](https://www.continuum.io/downloads) and follow the instructions to download and install.
+
+-------------
 
 # Creating Environments
 We will create two environments, so we can practice switching between virtual environments. To create our first environment, type
@@ -41,6 +47,8 @@ Hit `y`. Then, we will create our second environment.
 conda create --name second_environment_name python=3 babel
 ```
 This time, we created an environment in Python 3, with `babel` installed. To explore more commands, type `conda create --help`.
+
+-------------
 
 # Listing Environments
 To see what environments you have, type
