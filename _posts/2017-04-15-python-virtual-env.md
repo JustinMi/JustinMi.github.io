@@ -15,6 +15,7 @@ In this tutorial, we will go over the basics of using Anaconda's environment man
 ### Prerequisites/Assumptions: 
 * You are using OS X
 * You are familiar with the Unix terminal
+* You have Python installed
 
 -------------
 
