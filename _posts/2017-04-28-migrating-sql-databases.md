@@ -124,17 +124,28 @@ $ python manage.py loaddata datadump.json
 And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
 
 If you are having trouble, here are some pages that I found helpful when working on this writeup:
-http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql
+<a href="http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql">http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql<a>
 
-http://stackoverflow.com/questions/19189813/setting-django-up-to-use-mysql
+<a href="http://stackoverflow.com/questions/19189813/setting-django-up-to-use-mysql
+">http://stackoverflow.com/questions/19189813/setting-django-up-to-use-mysql
+</a>
 
-https://docs.djangoproject.com/en/1.10/ref/databases/#mysql-notes
+<a href="https://docs.djangoproject.com/en/1.10/ref/databases/#mysql-notes
+">https://docs.djangoproject.com/en/1.10/ref/databases/#mysql-notes
+</a>
 
-http://stackoverflow.com/questions/11546151/how-to-make-db-dumpfile-in-django
+<a href="http://stackoverflow.com/questions/11546151/how-to-make-db-dumpfile-in-django
+">http://stackoverflow.com/questions/11546151/how-to-make-db-dumpfile-in-django
+</a>
 
-https://www.digitalocean.com/community/tutorials/how-to-use-mysql-or-mariadb-with-your-django-application-on-ubuntu-14-04
+<a href="https://www.digitalocean.com/community/tutorials/how-to-use-mysql-or-mariadb-with-your-django-application-on-ubuntu-14-04
+">https://www.digitalocean.com/community/tutorials/how-to-use-mysql-or-mariadb-with-your-django-application-on-ubuntu-14-04
+</a>
 
-https://docs.djangoproject.com/en/1.11/topics/migrations/
+<a href="https://docs.djangoproject.com/en/1.11/topics/migrations/
+">https://docs.djangoproject.com/en/1.11/topics/migrations/
+</a>
+
 
 
 
