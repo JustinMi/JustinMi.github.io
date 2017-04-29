@@ -81,7 +81,7 @@ $ source activate second_environment_name
 ```
 And if we type `python` in the terminal, we will see that now we have the Python 3 interpreter! We can now run programs in Python 3.
 
-# Working with Packages.
+# Working with Packages
 Let's say we want to install the `numpy` package. Let's search for it first, to make sure that it is in the Anaconda index. Type
 ```
 conda search numpy
