@@ -22,7 +22,7 @@ This tutorial will explain how to migrate a Django application running SQLite to
 _You can skip this step if you already have MySQL set up on your computer._
 
 
-First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). _Make sure to save the password they give you!_
+First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). _Make sure to save the temporary root password they give you!_
 
 
 Try running `mysql` in terminal. You might get an error like "command not found". If so, in terminal, configure your computer's `$PATH` so it recognizes `mysql` as an exectutable:  
@@ -58,7 +58,7 @@ Now we are ready to use MySQL! Enter
 ```shell
 $ mysql -u root -p
 ```
-In the MySQL shell, enter
+Log in using your root password. If this is your first time logging in, use the password that you saved in step 1. In the MySQL shell, enter
 ```
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
 ```
@@ -78,10 +78,35 @@ and copy-paste this:
 alias mysql='mysql -u root -p'
 ```
 
-
-
-
-
+# Step 3: Changing Django App Settings
+Now, in your terminal, navigate to the root directory of your Django application. Run
+```
+python manage.py dumpdata > datadump.json
+```
+This will create a dumpfile of the data stored in your SQLite database. Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
+```
+pip install mysql-connector-python
+pip install MySQL-python
+```
+or
+```
+conda install mysql-connector-python
+conda install MySQL-python
+```
+Finally, in your `settings.py` file in your app, change the `DATABASES` section to match the following:
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_project_name',
+        'USER': 'root',
+        'PASSWORD': 'your_password',
+        'HOST': 'your_host_address', 
+        'PORT': 'your_port',
+    }
+}
+```
+A reminder that `your_project_name` should be the same name as the database you created in MySQL in Step 2. `your_password` is the same password that you use to log into MySQL. The `HOST` and `PORT` can be empty if you are simply hosting your webapp locally, but if you are running MySQL in a virtual server then fill in your host address and port accordingly. 
 
 
 
