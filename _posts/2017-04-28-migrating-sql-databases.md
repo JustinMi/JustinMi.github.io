@@ -29,45 +29,6 @@ After you finish installing, double check that your server is running. On Mac OS
 
 -------------
 
-# Step 1 (Ubuntu): Downloading and Setting Up MySQL 
-_You can skip this step if you already have MySQL set up on your computer._
-
-If you are using Ubuntu, you can install using 
-```
-$ sudo apt-get update
-$ sudo apt-get install mysql-server
-```
-
-You will be prompted to set up a root password. Don't forget it, as you will use it later! Then, run the security script to configure MySQL.
-```
-$ sudo mysql_secure_installation
-```
-
-To test MySQL is working, enter
-```
-systemctl status mysql.service
-```
-
-And you should see an output like
-```
-● mysql.service - MySQL Community Server
-   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: en
-   Active: active (running) since Wed 2016-11-23 21:21:25 UTC; 30min ago
- Main PID: 3754 (mysqld)
-    Tasks: 28
-   Memory: 142.3M
-      CPU: 1.994s
-   CGroup: /system.slice/mysql.service
-           └─3754 /usr/sbin/mysqld
-```
-
-If MySQL isn't running, start it using 
-```
-sudo systemctl mysql start
-```
-
--------------
-
 # Step 2: Finshing Up Installation
 _You can skip this step if you already have MySQL set up on your computer._
 
@@ -177,7 +138,6 @@ $ python manage.py loaddata datadump.json
 And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
 
 If you are having trouble, here are some pages that I found helpful when working on this writeup:
-<a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04</a>
 
 <a href="http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql">http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql<a>
 
