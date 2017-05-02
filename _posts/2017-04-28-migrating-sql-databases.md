@@ -14,19 +14,62 @@ This is where MySQL comes in--it is the most popular large-scale database manage
 This tutorial will explain how to migrate a Django application running SQLite to MySQL, from the ground up. 
 
 ### Prerequisites/Assumptions: 
-* You are using OS X
+* You are using OS X or Ubuntu
 * Your webapp is using Django 1.10.x
 * You have an existing database in SQLite
 
 -------------
 
-# Step 1: Downloading and Setting Up MySQL
+# Step 1 (OS X): Downloading and Setting Up MySQL 
 _You can skip this step if you already have MySQL set up on your computer._
 
+First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). _Make sure to save the temporary root password they give you!_
 
-First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). _Make sure to save the temporary root password they give you!_
+After you finish installing, double check that your server is running. On Mac OS, you can do this my going to System Preferences > MySQL.
 
-After you finish installing, double check that your server is running. On macOS, you can do this my going to System Preferences > MySQL.
+-------------
+
+# Step 1 (Ubuntu): Downloading and Setting Up MySQL 
+_You can skip this step if you already have MySQL set up on your computer._
+
+If you are using Ubuntu, you can install using 
+```
+$ sudo apt-get update
+$ sudo apt-get install mysql-server
+```
+
+You will be prompted to set up a root password. Don't forget it, as you will use it later! Then, run the security script to configure MySQL.
+```
+$ sudo mysql_secure_installation
+```
+
+To test MySQL is working, enter
+```
+systemctl status mysql.service
+```
+
+And you should see an output like
+```
+● mysql.service - MySQL Community Server
+   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: en
+   Active: active (running) since Wed 2016-11-23 21:21:25 UTC; 30min ago
+ Main PID: 3754 (mysqld)
+    Tasks: 28
+   Memory: 142.3M
+      CPU: 1.994s
+   CGroup: /system.slice/mysql.service
+           └─3754 /usr/sbin/mysqld
+```
+
+If MySQL isn't running, start it using 
+```
+sudo systemctl mysql start
+```
+
+-------------
+
+# Step 2: Finshing Up Installation
+_You can skip this step if you already have MySQL set up on your computer._
 
 Try running `mysql` in terminal. You might get an error like "command not found". If so, in terminal, configure your computer's `$PATH` so it recognizes `mysql` as an exectutable:  
 ```shell
@@ -56,7 +99,7 @@ The above code allows `mysql` to be recognized every time. Save the file, restar
 
 -------------
 
-# Step 2: Creating MySQL Users
+# Step 3: Creating MySQL Users
 _NOTE: in this tutorial, we are altering the root user because it is assumed you do not have any other local users on your MySQL server. If you do, change the usernames accordingly_
 
 Now we are ready to use MySQL! Enter
@@ -85,7 +128,7 @@ alias mysql='mysql -u root -p'
 
 -------------
 
-# Step 3: Changing Django App Settings
+# Step 4: Changing Django App Settings
 Now, in your terminal, navigate to the root directory of your Django application. Run
 ```shell
 $ python manage.py dumpdata > datadump.json
@@ -117,7 +160,7 @@ A reminder that `your_project_name` should be the same name as the database you 
 
 -------------
 
-# Step 4: Make Migrations
+# Step 5: Make Migrations
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
 ```
 $ python manage.py makemigrations
@@ -130,10 +173,12 @@ $ python manage.py loaddata datadump.json
 
 -------------
 
-# Step 5: Wrap Up
+# Step 6: Wrap Up
 And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
 
 If you are having trouble, here are some pages that I found helpful when working on this writeup:
+<a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04</a>
+
 <a href="http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql">http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql<a>
 
 <a href="http://stackoverflow.com/questions/19189813/setting-django-up-to-use-mysql
