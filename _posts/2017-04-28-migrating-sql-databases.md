@@ -30,7 +30,7 @@ After you finish installing, double check that your server is running. On Mac OS
 -------------
 
 # Step 1 (Ubuntu): Downloading and Setting Up MySQL 
-_You can skip this step if you already have MySQL set up on your computer._
+_You can skip this step if you already have MySQL set up on your computer or server._
 
 If you are using Ubuntu, you can install using 
 ```shell
