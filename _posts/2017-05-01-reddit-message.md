@@ -45,7 +45,7 @@ Wow I am very flattered that you came to me for advice, haha. I wanna first say 
 
 Before I answer your questions, I also wanna say that I don't know everything about the CS world, and I also don't claim to be the best student by any metric, so please take what I am about to say with generous pinches of salt.
 
-> "...after reading about Berkeley's CS courses and how great it is, I'm really starting to question whether I'm screwed by going to UConn"
+> "...after reading about Berkeley's CS courses and how great it is, I'm really starting to question whether I'm screwed by going to [my school]"
 
 Yes, I do think that Berkeley's CS courses are very well-run and well-taught, and I am admitedly very proud of the EECS department here. **_However, I do not think that you are screwed by going to UConn._** At Berkeley, we don't learn deeper things than other schools; we don't get exposed to secret data structures or secret algorithms; everything that gets taught here is easily accessible and commonly taught. I took a quick look at your DS course and I am very confident that it will teach you much of the same things we learn in 61B. You will not be behind. 
 
