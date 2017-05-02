@@ -116,7 +116,7 @@ A reminder that `your_project_name` should be the same name as the database you 
 
 -------------
 
-# Step 4: Make Migrations
+# Step 5: Make Migrations
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
 ```shell
 $ python manage.py makemigrations
@@ -129,7 +129,7 @@ $ python manage.py loaddata datadump.json
 
 -------------
 
-# Step 5: Wrap Up
+# Step 6: Wrap Up
 And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
 
 If you are having trouble, here are some pages that I found helpful when working on this writeup:
