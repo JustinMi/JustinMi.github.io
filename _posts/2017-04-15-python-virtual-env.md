@@ -10,7 +10,7 @@ What version of Python do you normally use? If you are like me, that may be a bi
 
 However, with the work done on [Anaconda](https://www.continuum.io/downloads) by the good folks at Continuum, this issue turns trivial! On the surface, Anaconda provides a huge compendium of Python libaries, but it also gives you the ability to create Python virtual environments! With this, not only can you easily switch between Python 2 and Python 3 in your terminal whenever you switch projects, you can even create special environments with specific dependencies for each specific project you work on! This simplifies things a great deal. While things like `virtualenv` exist, Anaconda is superior in that it combines the easy library-installation perks of `pip` with the easy environment-switching perks of `virtualenv`, allowing you to seamlessly switch between environments, create new ones, and install dependendencies. It is a "one-command-fit-all" for managing environments and installing packages. For more details, you can see this [handy chart](https://conda.io/docs/_downloads/conda-pip-virtualenv-translator.html).
 
-In this tutorial, we will go over the basics of using Anaconda's environment manager, Conda in terminal.
+In this tutorial, we will go over the basics of using Anaconda's environment manager, Conda, in terminal.
 
 ### Prerequisites/Assumptions: 
 * You are using OS X
