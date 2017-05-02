@@ -33,23 +33,23 @@ After you finish installing, double check that your server is running. On Mac OS
 _You can skip this step if you already have MySQL set up on your computer._
 
 If you are using Ubuntu, you can install using 
-```
+```shell
 $ sudo apt-get update
 $ sudo apt-get install mysql-server
 ```
 
 You will be prompted to set up a root password. Don't forget it, as you will use it later! Then, run the security script to configure MySQL.
-```
+```shell
 $ sudo mysql_secure_installation
 ```
 
 To test MySQL is working, enter
-```
+```shell
 systemctl status mysql.service
 ```
 
 And you should see an output like
-```
+```shell
 ● mysql.service - MySQL Community Server
    Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: en
    Active: active (running) since Wed 2016-11-23 21:21:25 UTC; 30min ago
@@ -62,7 +62,7 @@ And you should see an output like
 ```
 
 If MySQL isn't running, start it using 
-```
+```shell
 sudo systemctl mysql start
 ```
 
