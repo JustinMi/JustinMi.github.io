@@ -4,7 +4,7 @@ title: "An Interesting Reddit Message"
 date: 2017-05-01
 ---
 
-Today, I got a message on Reddit that really took me aback. For a little bit of context, there was recently [a post on Reddit's CSCareerQuestions community](https://www.reddit.com/r/cscareerquestions/comments/67mdln/berkeleys_cs61b_is_difficult_af/?st=j274snid&sh=a5a43106) about Berkeley's [61B class](http://datastructur.es/) which sparked a lot of discussion about the differences (or lack thereof) in course quality between different schools. 
+Today, I got a message on Reddit that really took me aback. For a little bit of context, there was recently [a post on Reddit's CSCareerQuestions community](https://www.reddit.com/r/cscareerquestions/comments/67mdln/berkeleys_cs61b_is_difficult_af/?st=j274snid&sh=a5a43106) about Berkeley's [61B class](http://datastructur.es/) which sparked a lot of discussion about the differences (or lack thereof, in my opinion) in course quality between different schools. 
 
 A Reddit user (whom I made anonymous) saw one of my comments in that thread and sent me this incredibly long private message conveying his concerns and anxieties. The message is pasted below, with sensitive information removed using [square brackets].  I personally believe that while Berkeley's Data Structures course is admittedly good, it does not imply other schools' courses suck, and more important, it _absolutely_ does not imply that students at other schools suck. In my response, I tried to convey that.
 
