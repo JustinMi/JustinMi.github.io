@@ -27,6 +27,47 @@ First, we will download and set up MySQL using [instructions here.](https://dev.
 
 After you finish installing, double check that your server is running. On Mac OS, you can do this my going to System Preferences > MySQL.
 
+-------------
+
+# Step 1 (Ubuntu): Downloading and Setting Up MySQL 
+_You can skip this step if you already have MySQL set up on your computer._
+
+If you are using Ubuntu, you can install using 
+```shell
+$ sudo apt-get update
+$ sudo apt-get install mysql-server
+```
+
+You will be prompted to set up a root password. Don't forget it, as you will use it later! Then, run the security script to configure MySQL.
+```shell
+$ sudo mysql_secure_installation
+```
+
+To test MySQL is working, enter
+```shell
+systemctl status mysql.service
+```
+
+And you should see an output like
+```shell
+● mysql.service - MySQL Community Server
+   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: en
+   Active: active (running) since Wed 2016-11-23 21:21:25 UTC; 30min ago
+ Main PID: 3754 (mysqld)
+    Tasks: 28
+   Memory: 142.3M
+      CPU: 1.994s
+   CGroup: /system.slice/mysql.service
+           └─3754 /usr/sbin/mysqld
+```
+
+If MySQL isn't running, start it using 
+```shell
+sudo systemctl mysql start
+```
+
+-------------
+
 # Step 2: Finshing Up Installation
 _You can skip this step if you already have MySQL set up on your computer._
 
