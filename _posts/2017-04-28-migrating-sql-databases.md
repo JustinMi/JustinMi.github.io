@@ -57,6 +57,7 @@ The above code allows `mysql` to be recognized every time. Save the file, restar
 
 # Step 2: Creating MySQL Users
 _NOTE: in this tutorial, we are altering the root user because it is assumed you do not have any other local users on your MySQL server. If you do, change the usernames accordingly_
+
 Now we are ready to use MySQL! Enter
 ```shell
 $ mysql -u root -p
