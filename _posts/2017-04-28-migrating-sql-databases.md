@@ -27,6 +27,9 @@ First, we will download and set up MySQL using [instructions here.](https://dev.
 
 After you finish installing, double check that your server is running. On Mac OS, you can do this my going to System Preferences > MySQL.
 
+# Step 2: Finshing Up Installation
+_You can skip this step if you already have MySQL set up on your computer._
+
 Try running `mysql` in terminal. You might get an error like "command not found". If so, in terminal, configure your computer's `$PATH` so it recognizes `mysql` as an exectutable:  
 ```shell
 $ export PATH=$PATH:/path/to/your/mysql/bin
@@ -55,7 +58,7 @@ The above code allows `mysql` to be recognized every time. Save the file, restar
 
 -------------
 
-# Step 2: Creating MySQL Users
+# Step 3: Creating MySQL Users
 _NOTE: in this tutorial, we are altering the root user because it is assumed you do not have any other local users on your MySQL server. If you do, change the usernames accordingly_
 
 Now we are ready to use MySQL! Enter
@@ -84,7 +87,7 @@ alias mysql='mysql -u root -p'
 
 -------------
 
-# Step 3: Changing Django App Settings
+# Step 4: Changing Django App Settings
 Now, in your terminal, navigate to the root directory of your Django application. Run
 ```shell
 $ python manage.py dumpdata > datadump.json
