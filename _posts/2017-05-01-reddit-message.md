@@ -3,13 +3,26 @@ layout: post
 title: "An Interesting Reddit Message"
 date: 2017-05-01
 ---
+
+Today, I got a message on Reddit that really took be aback. For a little bit of context, there was recently a post on Reddit's CSCareerQuestions community about Berkeley's 61B class which sparked a lot of discussion about the differences between course quality between different schools. 
+
+A Reddit user (whom I made anonymous) saw one of my comments in that thread and sent me this incredibly long private message conveying his insecurities and anxieties. The message is pasted below, with sensitive information removed using [square brackets].  I personally believe that while Berkeley's Data Structures course is admittedly good, it does not imply other schools' courses suck, and more important, it _absolutely_ does not imply that students at other schools suck. In my response, I tried to convey that.
+
+However, his message struck a chord in me because it made me realize something greater than that single student's concern. I feel like there are many students like him at other schools who keep getting beat over the head with the preaching of "target schools" and the "big 5" and rankings that they lose faith in their own, really great, programs. And to be honest, the CSCareerQuestions community on Reddit does no small part in perpetuating those insecurities.
+
+I personally believe that CS, already somewhat known to be more meritocratic than other fields, still has a lot more progress that it can make. Great coders can come out of everywhere, so it is about time that the field recognizes that and stops putting so much emphasis on the apparent "prestige" of CS programs. 
+
+Anyways, here is the message I got, and below that is the response I gave. 
+
+------
+
 Hi! 
 
-I saw your post on the CSCQ thread about 61B a couple of days ago. This is a bit of a weird series of questions, but I hope you can understand where I'm coming from when I ask them. I'm currently a freshman CS major at the University of Connecticut (so quite literally different ends of the country, haha), and after reading about Berkeley's CS courses and how great it is, I'm really starting to question whether I'm screwed by going to UConn, rather than go for something greater. I mainly chose UConn out of cost and it's not totally bad CS program, but I'm wondering if I should consider the curriculum over the cost rather than the opposite.
+I saw your post on the CSCQ thread about 61B a couple of days ago. This is a bit of a weird series of questions, but I hope you can understand where I'm coming from when I ask them. I'm currently a freshman CS major at [a different school than Berkeley], and after reading about Berkeley's CS courses and how great it is, I'm really starting to question whether I'm screwed by going to [my school], rather than go for something greater. I mainly chose [my school] out of cost and it's not totally bad CS program, but I'm wondering if I should consider the curriculum over the cost rather than the opposite.
 
 I should preface this with the fact that if I use "greatness" about Berkeley or something to that effect, I'm not being sarcastic or jealous or whatever, I'm just trying my best to describe the curriculum, haha.
 
-Just in your opinion, do you by chance know anything about the CS program at UConn, and whether it's at all good? Should I be concerned with the pedigree of schools, in general? That is, whether it'll help me get a nice job/internship?
+Just in your opinion, do you by chance know anything about the CS program at [my school], and whether it's at all good? Should I be concerned with the pedigree of schools, in general? That is, whether it'll help me get a nice job/internship?
 
 I've read all these posts about how Berkeley has a phenomenal data structures (and I assume algorithms course), and then I look at my DS&A course (which, combines both I might add, instead of splitting it up) and I get nervous about my preparation going into CS as a field. It seems Berkeley students have so much "firepower" through the course that I don't, how they're prepared for medium-hard interview questions and help get internships through it, and I'm just wondering how I could try and reach that level, y'know? I know I could take the course through the website and whatnot, but I won't have nearly any of the resources at my disposal that you guys do, which kind of makes me a bit skeptical in doing it. Not only that, but I only have 4 months of down time that I'd be able to spend on learning DS&A, and I don't think I could really fit all of that into the summer break.
 
@@ -24,7 +37,7 @@ I'm sorry if this came off as therapy-esque and all that, I suppose I just need 
 Thank you so much!
 
 
-
+-------------
 
 Hey Anonymous,
 
