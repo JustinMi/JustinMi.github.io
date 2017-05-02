@@ -118,11 +118,11 @@ mysql> FLUSH PRIVILEGES;
 mysql> QUIT
 ```
 If you want to skip typing `mysql -u root -p` every time you want to access your mysql server, you can add a bash alias:
-```
+```shell
 $ nano ~/.bash_profile
 ```
 and copy-paste this:
-```
+```shell
 alias mysql='mysql -u root -p'
 ```
 
@@ -162,12 +162,12 @@ A reminder that `your_project_name` should be the same name as the database you 
 
 # Step 5: Make Migrations
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
-```
+```shell
 $ python manage.py makemigrations
 $ python manage.py migrate --run-syncdb
 ```
 Finally, when your MySQL database is all set up, load all the data you saved in the dumpfile in step 3:
-```
+```shell
 $ python manage.py loaddata datadump.json
 ```
 
