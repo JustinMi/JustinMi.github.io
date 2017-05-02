@@ -10,7 +10,7 @@ A Reddit user (whom I made anonymous) saw one of my comments in that thread and 
 
 However, his message struck a chord in me because it made me realize something greater than that single student's concern. I feel like there are many students like him at other schools who keep getting beat over the head with the preaching of "target schools" and the "big 5" and rankings that they lose faith in their own, really great, programs. And to be honest, the CSCareerQuestions community on Reddit does no small part in perpetuating those insecurities.
 
-I personally believe that CS, already somewhat known to be more meritocratic than other fields, still has a lot more progress that it can make. Great coders can come out of everywhere, so it is about time that the field recognizes that and stops putting so much emphasis on the apparent "prestige" of CS programs. 
+I personally believe that the professional CS community, already somewhat known to be more meritocratic than other fields, still has a lot more progress that it can make. Great coders can come out of everywhere, so it is about time that the field recognizes that and stops putting so much emphasis on the apparent "prestige" of CS programs. 
 
 Anyways, here is the message I got, and below that is the response I gave. 
 
