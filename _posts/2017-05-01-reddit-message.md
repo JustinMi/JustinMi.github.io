@@ -47,7 +47,7 @@ Before I answer your questions, I also wanna say that I don't know everything ab
 
 > "...after reading about Berkeley's CS courses and how great it is, I'm really starting to question whether I'm screwed by going to [my school]"
 
-Yes, I do think that Berkeley's CS courses are very well-run and well-taught, and I am admitedly very proud of the EECS department here. **_However, I do not think that you are screwed by going to UConn._** At Berkeley, we don't learn deeper things than other schools; we don't get exposed to secret data structures or secret algorithms; everything that gets taught here is easily accessible and commonly taught. I took a quick look at your DS course and I am very confident that it will teach you much of the same things we learn in 61B. You will not be behind. 
+Yes, I do think that Berkeley's CS courses are very well-run and well-taught, and I am admitedly very proud of the EECS department here. **_However, I do not think that you are screwed by going to [your school]._** At Berkeley, we don't learn deeper things than other schools; we don't get exposed to secret data structures or secret algorithms; everything that gets taught here is easily accessible and commonly taught. I took a quick look at your DS course and I am very confident that it will teach you much of the same things we learn in 61B. You will not be behind. 
 
 >  "I mainly chose [my school] out of cost and it's not totally bad CS program"
 
