@@ -26,6 +26,7 @@ _You can skip this step if you already have MySQL set up on your computer._
 
 First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). _Make sure to save the temporary root password they give you!_
 
+After you finish installing, double check that your server is running. On macOS, you can do this my going to System Preferences > MySQL.
 
 Try running `mysql` in terminal. You might get an error like "command not found". If so, in terminal, configure your computer's `$PATH` so it recognizes `mysql` as an exectutable:  
 ```shell
