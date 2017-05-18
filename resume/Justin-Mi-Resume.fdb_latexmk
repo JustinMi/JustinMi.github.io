@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1493316809 "Justin-Mi-Resume.tex" "Justin-Mi-Resume.pdf" "Justin-Mi-Resume" 1493316809
+["pdflatex"] 1493316809 "Justin-Mi-Resume.tex" "Justin-Mi-Resume.pdf" "Justin-Mi-Resume" 1493921082
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -41,6 +41,6 @@
   "Justin-Mi-Resume.aux" 1493316809 8 a94a2480d3289e625eea47cd1b285758 ""
   "Justin-Mi-Resume.tex" 1493316809 7079 d829b2a7a42aa0aa2e187064e79d8cd8 ""
   (generated)
-  "Justin-Mi-Resume.aux"
-  "Justin-Mi-Resume.log"
   "Justin-Mi-Resume.pdf"
+  "Justin-Mi-Resume.log"
+  "Justin-Mi-Resume.aux"
