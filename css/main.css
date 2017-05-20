@@ -12,22 +12,30 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
+/**
+ * Links
+ */
 a {
-    text-decoration: none;
+  color: #999;
+  text-decoration: none; }
+  a:visited {
+    color: #1756a9; }
+  a:hover {
     color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
+    text-decoration: underline; }
+  .social-media-list a:hover {
+    text-decoration: none; }
+    .social-media-list a:hover .username {
+      text-decoration: underline; }
+
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -46,7 +54,10 @@ ul.posts li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bolder; }
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-weight: 10000; 
+}
 
 /**
  * Blockquotes
