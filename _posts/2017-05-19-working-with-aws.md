@@ -20,6 +20,8 @@ $ sudo ufw allow 8000
 as well as edit inbound rules in your security group by going to "Actions" > "Edit inbound rules" > "Add Rule", adding 8000 to port range, and setting source to be "anywhere". 
 
 <img src="{{ site.baseurl }}/images/securitygroup.png" alt="Security Group">
+<br>
+<br>
 <img src="{{ site.baseurl }}/images/inboundrules.png" alt="Inbound Rules">
 
 
