@@ -24,7 +24,7 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
-    font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #111;
     background-color: #fdfdfd;
     -webkit-text-size-adjust: 100%;
@@ -33,7 +33,7 @@ p {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal; 
-    margin: 60px auto;
+
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
