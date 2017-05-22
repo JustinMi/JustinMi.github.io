@@ -38,7 +38,7 @@ as well as edit inbound rules in your security group by going to "Actions" > "Ed
 80--where HTTP requests are fielded
 
 # Sending Files to Server
-In order to send files to your server, we will use SCP, which is short for Secure Copy, and is based off of the SSH protocol. Since we are already able to SSH to the server, we will be able to SCP files to the server in a similar manner. Type the following in, replacing the path to your .pem file, the directory or file name, your username, and the public DNS name of your instance.
+In order to send files to your server, we will use SCP, which is short for Secure Copy Protocol, and is based off of the SSH protocol. Since we are already able to SSH to the server, we will be able to SCP files to the server in a similar manner. Type the following in, replacing the path to your .pem file, the directory or file name, your username, and the public DNS name of your instance.
 
 ```shell
 scp -i /path/to/your/.pem -r directory_name username@your.public.DNS:destination/path
