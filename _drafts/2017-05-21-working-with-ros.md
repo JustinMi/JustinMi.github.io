@@ -12,7 +12,7 @@ This tutorial will get the average user up and running with ROS!
 - You have Python 2.7 installed, and know how to code in it
 - You are using OS X
 
-# Step 1: Installation and Set Up
+# Step 1: Download and Set Up
 First, we need Homebrew to download and install most of our dependencies. If you don't already have Homebrew, go [here](https://brew.sh/) to set it up.
 
 Then, we will install cmake:
@@ -64,3 +64,78 @@ Then, we initialize `rosdep`
 $ sudo -H rosdep init
 $ rosdep update
 ```
+
+# Step 2: Installation
+We will first create a `catkin` workspace for our core ROS packages. 
+
+```shell
+$ mkdir ~/ros_catkin_ws
+$ cd ~/ros_catkin_ws
+```
+
+Then we will use the `wstool` module that we installed earlier to install the 'desktop' variant of the core packages to install. 
+
+```shell
+$ rosinstall_generator desktop --rosdistro kinetic --deps --wet-only --tar > kinetic-desktop-wet.rosinstall
+$ wstool init -j8 src kinetic-desktop-wet.rosinstall
+```
+
+If your installation fails or is interupted, enter
+
+```shell
+$ wstool update -j 4 -t src
+```
+
+Then we will recursively install all the dependencies for the `catkin` workspace:
+
+```shell
+$ rosdep install --from-paths src --ignore-src --rosdistro kinetic -y
+```
+
+The `--from-paths` option indicates that we want to install packages from `src`. The `--ignore-src` option indicates that we don't want to install any packages not found in `src`. The `--rosdistro` option is to indicate the type of distro we are planning to set up, in this case `kinetic`. If you have any errors, type:
+
+```shell
+rosdep install -ay --os=ubuntu:osx
+```
+
+And if your console returns
+
+```shell
+#All required rosdeps installed successfully
+```
+
+You should be fine. 
+
+Next, we will build the `catkin` workspace. This might take a while due to troubleshooting many bugs in installation, so bear with me. Type in 
+
+```shell
+$ ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
