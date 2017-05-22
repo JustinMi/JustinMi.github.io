@@ -11,3 +11,32 @@ This tutorial will get the average user up and running with ROS!
 ### Prerequisites/Assumptions: 
 - You have Python 2.7 installed, and know how to code in it
 - You are using OS X
+
+# Step 1: Installation and Set Up
+First, we need Homebrew to download and install most of our dependencies. If you don't already have Homebrew, go [here](https://brew.sh/) to set it up.
+
+Then, we will install cmake:
+
+```shell
+$ brew update
+$ brew install cmake
+```
+
+Then, we will install further dependencies:
+
+```shell 
+$ brew tap ros/deps
+$ brew tap osrf/simulation   
+$ brew tap homebrew/versions 
+$ brew tap homebrew/science 
+```
+
+Those dependencies include Gazebo, a robot simulation package, SDFormat, an XML file that describes robotic environments, objects, and robots, and others. 
+
+In addition, we will need to configure Python to work with the installed modules, as follows:
+
+```shell
+$ mkdir -p ~/Library/Python/2.7/lib/python/site-packages
+$ echo "$(brew --prefix)/lib/python2.7/site-packages" >> ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth
+```
+
