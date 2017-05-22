@@ -40,3 +40,27 @@ $ mkdir -p ~/Library/Python/2.7/lib/python/site-packages
 $ echo "$(brew --prefix)/lib/python2.7/site-packages" >> ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth
 ```
 
+Then, we will install more modules using Python's `pip` package installer. If you don't have pip, install using these commands:
+
+```shell
+$ sudo -H python -m pip install -U pip  # Update pip
+```
+
+Then, install the following packages:
+
+```shell
+$ sudo -H python -m pip install -U wstool rosdep rosinstall rosinstall_generator rospkg catkin-pkg Distribute sphinx
+```
+
+If you get an error like `Cannot remove entries from nonexistent file /Users/anaconda3/lib/python3.4/site-packages/easy-install.pth` then you are facing [a well-known problem](https://github.com/ContinuumIO/anaconda-issues/issues/542) in `pip`, so add a `--ignore-installed` option to skip the error:
+
+```shell
+$ sudo -H python -m pip install -U wstool rosdep rosinstall rosinstall_generator rospkg catkin-pkg Distribute sphinx --ignore-installed
+```
+
+Then, we initialize `rosdep`
+
+```shell
+$ sudo -H rosdep init
+$ rosdep update
+```
