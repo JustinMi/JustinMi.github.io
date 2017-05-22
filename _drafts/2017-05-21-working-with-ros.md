@@ -4,7 +4,7 @@ title: "Working with ROS"
 date: 2017-05-21
 ---
 
-This article is a quickstart tutorial on how to use [ROS](http://www.ros.org/), short for Robot Operating System. Since the creators can describe it much better than I can, to give a description I am just going to lift a quote from the website: "It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms."
+This article is a quickstart tutorial on how to use [ROS](http://www.ros.org/), short for Robot Operating System. Since the creators can describe it much better than I can, to give a description I am just going to lift [a quote from the website](http://www.ros.org/about-ros/): "It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms."
 
 This tutorial will get the average user up and running with ROS!
  
@@ -52,7 +52,7 @@ Then, install the following packages:
 $ sudo -H python -m pip install -U wstool rosdep rosinstall rosinstall_generator rospkg catkin-pkg Distribute sphinx
 ```
 
-If you get an error like `Cannot remove entries from nonexistent file /Users/anaconda3/lib/python3.4/site-packages/easy-install.pth` then you are facing [a well-known problem](https://github.com/ContinuumIO/anaconda-issues/issues/542) in `pip`, so add a `--ignore-installed` option to skip the error:
+If you get an error like `Cannot remove entries from nonexistent file /Users/anaconda3/lib/python3.4/site-packages/easy-install.pth` then you are facing [a well-known problem](https://github.com/ContinuumIO/anaconda-issues/issues/542) in `pip`, so add a `--ignore-installed` option to work around the error:
 
 ```shell
 $ sudo -H python -m pip install -U wstool rosdep rosinstall rosinstall_generator rospkg catkin-pkg Distribute sphinx --ignore-installed
