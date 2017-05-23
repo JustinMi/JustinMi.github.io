@@ -112,6 +112,97 @@ Next, we will build the `catkin` workspace. This might take a while due to troub
 $ ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release
 ```
 
+If you get an error
+
+```shell
+CMake Error at cmake/empy.cmake:29 (message):
+  Unable to find either executable 'empy' or Python module 'em'...  try
+  installing the package 'python-empy'
+```
+
+Then we need to install the `empy` python package. 
+
+```shell
+$ pip install empy
+```
+
+Then, try the installation again:
+
+```shell
+$ ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release
+```
+
+If you get another error like
+
+```shell
+CMake Error at CMakeLists.txt:11 (find_package):
+  By not providing "Findconsole_bridge.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "console_bridge", but CMake did not find one.
+
+  Could not find a package configuration file provided by "console_bridge"
+  with any of the following names:
+
+    console_bridgeConfig.cmake
+    console_bridge-config.cmake
+
+  Add the installation prefix of "console_bridge" to CMAKE_PREFIX_PATH or set
+  "console_bridge_DIR" to a directory containing one of the above files.  If
+  "console_bridge" provides a separate development package or SDK, be sure it
+  has been installed.
+```
+
+We need to install `console_bridge`. Move back to the `ros_catkin_ws` directory, and enter
+
+```shell
+$ git clone git://github.com/ros/console_bridge.git
+$ cd console_bridge
+$ cmake .
+$ make
+$ sudo make install
+```
+
+Then try the installation again. 
+
+If you get the error
+
+```shell
+Poco was not found.  Set the Poco_INCLUDE_DIR cmake cache entry to the
+  top-level directory containing the poco include directories.  E.g
+  /usr/local/include/ or c:\poco\include\poco-1.3.2
+```
+
+Then install `poco` using 
+
+```shell
+brew install poco
+```
+
+If you get an error 
+
+```shell
+Could NOT find Eigen (missing: EIGEN_INCLUDE_DIR)
+```
+
+Then open up 
+
+```shell
+$ vim ~/ros_catkin_ws/src/cmake_modules/CMakeLists.txt
+```
+
+And type in 
+
+```shell
+INCLUDE_DIRECTORIES ( "$ENV{EIGEN3_INCLUDE_DIR}" )
+```
+
+If you get an error
+
+```shell
+include_directories given empty-string as include directory.
+```
+
+
 
 
 
