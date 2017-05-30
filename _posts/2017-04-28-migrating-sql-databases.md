@@ -106,18 +106,33 @@ Now we are ready to use MySQL! Enter
 ```shell
 $ mysql -u root -p
 ```
-Log in using your root password. If this is your first time logging in, use the password that you saved in step 1. In the MySQL shell, enter
+Log in using your root password. If this is your first time logging in, use the password that you saved in step 1. Now, if you want to change the root password to something of your own preference, in the MySQL shell, enter
 ```
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
 ```
+Now, you have your root user set up and can log into it using your own password. 
+
+If you want to create your own user, enter
+```shell
+mysql> CREATE USER 'your_new_username'@'localhost' IDENTIFIED BY 'new_password';
+mysql> GRANT ALL PRIVILEGES ON * . * TO 'your_new_username'@'localhost';
+FLUSH PRIVILEGES;
+```
+the `* . *` allows the user to have all access to the databases and tables in the server. For more fine-toothed assignment of priviledges, check out the [MySQL](https://dev.mysql.com/doc/refman/5.7/en/grant.html) documentation. 
+
+-------------
+
+# Step 4: Creating the Project Database
 Then, to create the database for your project:
 ```
 mysql> CREATE DATABASE your_project_name CHARACTER SET UTF8;
-mysql> GRANT ALL PRIVILEGES ON your_project_name.* TO root@localhost;
+mysql> GRANT ALL PRIVILEGES ON your_project_name.* TO your_username@localhost;
 mysql> FLUSH PRIVILEGES;
 mysql> QUIT
 ```
-If you want to skip typing `mysql -u root -p` every time you want to access your mysql server, you can add a bash alias:
+
+## A note
+If you want to skip typing `mysql -u root -p` every time you want to access your MySQL server, you can add a bash alias:
 ```shell
 $ nano ~/.bash_profile
 ```
@@ -125,10 +140,14 @@ and copy-paste this:
 ```shell
 alias mysql='mysql -u root -p'
 ```
+Then, every time you want to access your MySQL server you just need to enter
+```
+$ mysql
+```
 
 -------------
 
-# Step 4: Changing Django App Settings
+# Step 5: Changing Django App Settings
 Now, in your terminal, navigate to the root directory of your Django application. Run
 ```shell
 $ python manage.py dumpdata > datadump.json
@@ -138,11 +157,10 @@ This will create a dumpfile of the data stored in your SQLite database. Then, in
 $ pip install mysql-connector-python
 $ pip install MySQL-python
 ```
-or
-```shell
-$ conda install mysql-connector-python
-$ conda install MySQL-python
-```
+If you are using a virutal environment for Python, make sure you have `pip` installed in your virtual environment before using the `pip` commands above, or else the dependencies will be installed globally. 
+
+`mysql-connector-python' is a self-contained driver that enables Python programs to interface with MySQL databases. `MySQL-python` is another database connector option. The difference between the two is that `mysql-connector-python' is written in Python while `MySQL-python` is written in C. I suggest to use `MySQL-python` because it is 
+
 Finally, in your `settings.py` file in your app, change the `DATABASES` section to match the following:
 ```python
 DATABASES = {
@@ -156,11 +174,11 @@ DATABASES = {
     }
 }
 ```
-A reminder that `your_project_name` should be the same name as the database you created in MySQL in Step 2. `your_password` is the same password that you use to log into MySQL. The `HOST` and `PORT` can be empty if you are simply hosting your webapp locally, but if you are running MySQL in a virtual server then fill in your host address and port accordingly. 
+A reminder that `your_project_name` should be the same name as the database you created in MySQL in Step 2. `your_password` is the same password that you use to log into MySQL. The `HOST` and `PORT` values can be empty if you are simply hosting your webapp locally, but if you are running MySQL in a virtual server or a separate server then fill in your host address and port accordingly. 
 
 -------------
 
-# Step 5: Make Migrations
+# Step 6: Make Migrations
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
 ```shell
 $ python manage.py makemigrations
@@ -171,12 +189,16 @@ Finally, when your MySQL database is all set up, load all the data you saved in 
 $ python manage.py loaddata datadump.json
 ```
 
+## A Note
+
 -------------
 
-# Step 6: Wrap Up
+# Step 7: Wrap Up
 And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
 
-If you are having trouble, here are some pages that I found helpful when working on this writeup:
+If you are having trouble, here are some pages that I found helpful when working on this writeup: 
+
+
 <a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04</a>
 
 <a href="http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql">http://stackoverflow.com/questions/3034910/whats-the-best-way-to-migrate-a-django-db-from-sqlite-to-mysql<a>
