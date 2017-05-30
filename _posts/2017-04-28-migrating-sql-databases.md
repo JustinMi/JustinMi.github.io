@@ -159,7 +159,7 @@ $ pip install MySQL-python
 ```
 If you are using a virutal environment for Python, make sure you have `pip` installed in your virtual environment before using the `pip` commands above, or else the dependencies will be installed globally. 
 
-`mysql-connector-python' is a self-contained driver that enables Python programs to interface with MySQL databases. `MySQL-python` is another database connector option. The difference between the two is that `mysql-connector-python' is written in Python while `MySQL-python` is written in C. I suggest to use `MySQL-python` because it is 
+`mysql-connector-python` is a self-contained driver that enables Python programs to interface with MySQL databases. `MySQL-python` is another database connector option. The difference between the two is that `mysql-connector-python' is written in Python while `MySQL-python` is written in C. I suggest to use `MySQL-python` because it is faster with almost all SQL commands. The downside is that it is not compliant with Python 3. 
 
 Finally, in your `settings.py` file in your app, change the `DATABASES` section to match the following:
 ```python
@@ -174,7 +174,7 @@ DATABASES = {
     }
 }
 ```
-A reminder that `your_project_name` should be the same name as the database you created in MySQL in Step 2. `your_password` is the same password that you use to log into MySQL. The `HOST` and `PORT` values can be empty if you are simply hosting your webapp locally, but if you are running MySQL in a virtual server or a separate server then fill in your host address and port accordingly. 
+A reminder that `your_project_name` should be the same name as the database you created in MySQL in Step 2. `your_password` is the same password that you use to log into MySQL. The `HOST` and `PORT` values can be optional if you are simply hosting your webapp locally, but if you are running MySQL in a virtual server or a separate server then fill in your host address and port accordingly. 
 
 -------------
 
@@ -190,6 +190,7 @@ $ python manage.py loaddata datadump.json
 ```
 
 ## A Note
+If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `drop`
 
 -------------
 
