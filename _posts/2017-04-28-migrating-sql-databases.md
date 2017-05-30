@@ -158,7 +158,7 @@ $ pip install MySQL-python
 ```
 If you are using a virtual environment for Python, make sure you have `pip` installed in your virtual environment before using the `pip` commands above, or else the dependencies will be installed globally. 
 
-`MySQL-python` is a self-contained driver that enables Python programs to interface with MySQL databases. `mysql-connector-python` is another database connector option, created and maintained by Oracle. The difference between the two is that `mysql-connector-python' is written in Python while `MySQL-python` is written in C. I suggest to use `MySQL-python` because it is faster with almost all SQL commands. The downside is that it is not compliant with Python 3. 
+`MySQL-python` is a self-contained driver that enables Python programs to interface with MySQL databases. `mysql-connector-python` is another database connector option, created and maintained by Oracle. The difference between the two is that `mysql-connector-python` is written in Python while `MySQL-python` is written in C. I suggest to use `MySQL-python` because it is faster with almost all SQL commands. The downside is that it is not compliant with Python 3. 
 
 Finally, in your `settings.py` file in your app, change the `DATABASES` section to the following:
 ```python
@@ -254,7 +254,7 @@ Then, you can try the migration again.
 -------------
 
 # Step 7: Wrap Up
-And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and usefull for most development purposes, when your app transitions into production phase you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
+And that's it! Now you have transitioned your webapp from SQLite to MySQL. While SQLite is quick, reliable, and useful for most development purposes, when your app transitions into production you often need to transition your backend database to fill the needs. And with this tutorial, you now know how!
 
 If you are having trouble, here are some pages that I found helpful when working on this writeup: 
 
