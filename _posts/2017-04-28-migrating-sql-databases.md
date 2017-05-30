@@ -154,14 +154,13 @@ $ python manage.py dumpdata > datadump.json
 ```
 This will create a dumpfile of the data stored in your SQLite database. Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
 ```shell
-$ pip install mysql-connector-python
 $ pip install MySQL-python
 ```
-If you are using a virutal environment for Python, make sure you have `pip` installed in your virtual environment before using the `pip` commands above, or else the dependencies will be installed globally. 
+If you are using a virtual environment for Python, make sure you have `pip` installed in your virtual environment before using the `pip` commands above, or else the dependencies will be installed globally. 
 
-`mysql-connector-python` is a self-contained driver that enables Python programs to interface with MySQL databases. `MySQL-python` is another database connector option. The difference between the two is that `mysql-connector-python' is written in Python while `MySQL-python` is written in C. I suggest to use `MySQL-python` because it is faster with almost all SQL commands. The downside is that it is not compliant with Python 3. 
+`MySQL-python` is a self-contained driver that enables Python programs to interface with MySQL databases. `mysql-connector-python` is another database connector option, created and maintained by Oracle. The difference between the two is that `mysql-connector-python' is written in Python while `MySQL-python` is written in C. I suggest to use `MySQL-python` because it is faster with almost all SQL commands. The downside is that it is not compliant with Python 3. 
 
-Finally, in your `settings.py` file in your app, change the `DATABASES` section to match the following:
+Finally, in your `settings.py` file in your app, change the `DATABASES` section to the following:
 ```python
 DATABASES = {
     'default': {
@@ -190,7 +189,17 @@ $ python manage.py loaddata datadump.json
 ```
 
 ## A Note
-If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `drop`
+If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `DROP` the database and create a new one. To do so:
+```shell
+mysql> DROP DATABASE your_project_name;
+mysql> CREATE DATABASE your_project_name CHARACTER SET UTF8;
+mysql> GRANT ALL PRIVILEGES ON your_project_name.* TO your_username@localhost;
+mysql> FLUSH PRIVILEGES;
+mysql> QUIT
+```
+Then, you can try the migration again.
+
+
 
 -------------
 
