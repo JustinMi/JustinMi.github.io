@@ -175,6 +175,9 @@ DATABASES = {
 ```
 A reminder that `your_project_name` should be the same name as the database you created in MySQL in Step 2. `your_password` is the same password that you use to log into MySQL. The `HOST` and `PORT` values can be optional if you are simply hosting your webapp locally, but if you are running MySQL in a virtual server or a separate server then fill in your host address and port accordingly. 
 
+## A Note
+If you are using this MySQL server on your local machine, it is fine to store your MySQL root password in plaintext, but for a production-stage web app, we will need to add additional precautions to make sure your MySQL password is secure. In fact, even if you are using MySQL on your local machine, it doesn't hurt to take these precautions. We will set your password as an environmental variable, and access your password through the `os` module. 
+
 -------------
 
 # Step 6: Make Migrations
