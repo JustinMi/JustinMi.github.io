@@ -33,23 +33,23 @@ After you finish installing, double check that your server is running. On Mac OS
 _You can skip this step if you already have MySQL set up on your computer or server._
 
 If you are using Ubuntu, you can install using 
-```shell
+```bash
 $ sudo apt-get update
 $ sudo apt-get install mysql-server
 ```
 
 You will be prompted to set up a root password. Don't forget it, as you will use it later! Then, run the security script to configure MySQL.
-```shell
+```bash
 $ sudo mysql_secure_installation
 ```
 
 To test MySQL is working, enter
-```shell
+```bash
 systemctl status mysql.service
 ```
 
 And you should see an output like
-```shell
+```bash
 ● mysql.service - MySQL Community Server
    Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: en
    Active: active (running) since Wed 2016-11-23 21:21:25 UTC; 30min ago
@@ -62,7 +62,7 @@ And you should see an output like
 ```
 
 If MySQL isn't running, start it using 
-```shell
+```bash
 sudo systemctl mysql start
 ```
 
@@ -72,22 +72,22 @@ sudo systemctl mysql start
 _You can skip this step if you already have MySQL set up on your computer._
 
 Try running `mysql` in terminal. You might get an error like "command not found". If so, in terminal, configure your computer's `$PATH` so it recognizes `mysql` as an exectutable:  
-```shell
+```bash
 $ export PATH=$PATH:/path/to/your/mysql/bin
 ```  
 For me, the command was was  
-```shell
+```bash
 $ export PATH=$PATH:/usr/local/mysql/bin
 ```  
 Check and make sure that your terminal recognizes `mysql` now. You might still get a MySQL specific error, but that's okay--we will fix that in the next steps. 
 
 
-Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow `mysql` to be a recognizable command every time, we will edit your computer's bash profile. Open the bash profile:  
-```shell
-$ nano ~/.bash_profile
+Unfortunately, this fix only works temporarily. If you open a new terminal tab, you will have to do `export PATH...` again. To allow `mysql` to be a recognizable command every time, we will edit your computer's bash profile. Open the bash profile using your preferred text editor:  
+```bash
+$ vim ~/.bash_profile
 ```  
 In the file, copy-paste this:  
-```shell
+```bash
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 # Ensure user-installed binaries take precedence  
@@ -103,7 +103,7 @@ The above code allows `mysql` to be recognized every time. Save the file, restar
 _NOTE: in this tutorial, we are altering the root user because it is assumed you do not have any other local users on your MySQL server. If you do, change the usernames accordingly_
 
 Now we are ready to use MySQL! Enter
-```shell
+```bash
 $ mysql -u root -p
 ```
 Log in using your root password. If this is your first time logging in, use the password that you saved in step 1. Now, if you want to change the root password to something of your own preference, in the MySQL shell, enter
@@ -113,7 +113,7 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
 Now, you have your root user set up and can log into it using your own password. 
 
 If you want to create your own user, enter
-```shell
+```bash
 mysql> CREATE USER 'your_new_username'@'localhost' IDENTIFIED BY 'new_password';
 mysql> GRANT ALL PRIVILEGES ON * . * TO 'your_new_username'@'localhost';
 mysql> FLUSH PRIVILEGES;
@@ -133,11 +133,11 @@ mysql> QUIT
 
 ## A note
 If you want to skip typing `mysql -u root -p` every time you want to access your MySQL server, you can add a bash alias:
-```shell
-$ nano ~/.bash_profile
+```bash
+$ vim ~/.bash_profile
 ```
 and copy-paste this:
-```shell
+```bash
 alias mysql='mysql -u root -p'
 ```
 Then, every time you want to access your MySQL server you just need to enter
@@ -149,11 +149,11 @@ $ mysql
 
 # Step 5: Changing Django App Settings
 Now, in your terminal, navigate to the root directory of your Django application. Run
-```shell
+```bash
 $ python manage.py dumpdata > datadump.json
 ```
 This will create a dumpfile of the data stored in your SQLite database. Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
-```shell
+```bash
 $ pip install MySQL-python
 ```
 If you are using a virtual environment for Python, make sure you have `pip` installed in your virtual environment before using the `pip` commands above, or else the dependencies will be installed globally. 
@@ -178,22 +178,69 @@ A reminder that `your_project_name` should be the same name as the database you 
 ## A Note
 If you are using this MySQL server on your local machine, it is fine to store your MySQL root password in plaintext, but for a production-stage web app, we will need to add additional precautions to make sure your MySQL password is secure. In fact, even if you are using MySQL on your local machine, it doesn't hurt to take these precautions. We will set your password as an environmental variable, and access your password through the `os` module. 
 
+To allow your own user account to have access to the password, we will edit our `.bashrc` file, which sets system-wide configurations. 
+```bash
+$ vim ~/.bashrc
+```
+
+At the bottom of the file, add
+```bash
+export mysql_pass="your_mysql_password"
+```
+This will set `mysql_pass` as an environment variable on your machine permanently.
+
+If we want to let all users have access to the environmental variable, we will add a `*.sh` file to the `/etc/profile.d` folder of the production server. Alternatively, you can change `/etc/environment` but that is not recommended because it can only be accessed and changed by `root`, but `/etc/profile.d/*.sh` is equivalent to the `~/.profile` for each user. First, we will create the file for edit:
+```bash
+$ cd /etc/profile.d
+$ vim name_of_your_shell_script.sh
+```
+
+In the file, we will add the same line as before:
+```bash
+export mysql_pass="your_mysql_password"
+````
+
+Either way, you will have access to the environmental variable. 
+
+Then, at the top of `settings.py`, write
+```python
+import os
+```
+if it doesn't already exist. We will then change our database configuration to be
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_project_name',
+        'USER': 'root',
+        'PASSWORD': os.environ.get('mysql_pass'),
+        'HOST': 'your_host_address', 
+        'PORT': 'your_port',
+    }
+}
+```
+And you should be good!
+
+**And as an aside, if you are working in production, you should apply the above process to your Django `SECRET_KEY` as well to remove security vulnerabilities.  
+
+
 -------------
 
 # Step 6: Make Migrations
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
-```shell
+```bash
 $ python manage.py makemigrations
 $ python manage.py migrate --run-syncdb
 ```
 Finally, when your MySQL database is all set up, load all the data you saved in the dumpfile in step 3:
-```shell
+```bash
 $ python manage.py loaddata datadump.json
 ```
 
 ## A Note
 If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `DROP` the database and create a new one. To do so:
-```shell
+```bash
 mysql> DROP DATABASE your_project_name;
 mysql> CREATE DATABASE your_project_name CHARACTER SET UTF8;
 mysql> GRANT ALL PRIVILEGES ON your_project_name.* TO your_username@localhost;
