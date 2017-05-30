@@ -150,9 +150,9 @@ $ mysql
 # Step 5: Changing Django App Settings
 Now, in your terminal, navigate to the root directory of your Django application. Run
 ```bash
-$ python manage.py dumpdata > datadump.json
+$ python manage.py dumpdata --natural-foreign -e contenttypes -e auth.Permission > datadump.json
 ```
-This will create a dumpfile of the data stored in your SQLite database. Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
+This will create a dumpfile of the data stored in your SQLite database. the `--natural-foreign` argument serializes foreign keys, since you are transitioning to a new database. The `-e contenttypes -e auth.Permission` arguments exclude tables that would cause Django to throw an `IntegrityError`. Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
 ```bash
 $ pip install MySQL-python
 ```
