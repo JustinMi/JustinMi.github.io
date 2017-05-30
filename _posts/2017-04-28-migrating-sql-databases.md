@@ -116,7 +116,7 @@ If you want to create your own user, enter
 ```shell
 mysql> CREATE USER 'your_new_username'@'localhost' IDENTIFIED BY 'new_password';
 mysql> GRANT ALL PRIVILEGES ON * . * TO 'your_new_username'@'localhost';
-FLUSH PRIVILEGES;
+mysql> FLUSH PRIVILEGES;
 ```
 the `* . *` allows the user to have all access to the databases and tables in the server. For more fine-toothed assignment of priviledges, check out the [MySQL](https://dev.mysql.com/doc/refman/5.7/en/grant.html) documentation. 
 
