@@ -111,7 +111,7 @@ Now, you have your root user set up and can log into it using your own password.
 -------------
 
 # Step 4: Creating the Project Database
-Then, to create the database for your project:
+Then, to create the database for your project (please be sure to name the database `pcari` to limit conflicts in version control):
 ```bash
 mysql> CREATE DATABASE pcari CHARACTER SET UTF8;
 mysql> GRANT ALL PRIVILEGES ON pcari.* TO root@localhost;
@@ -137,7 +137,7 @@ Finally, in your `settings.py` file in your app, change the `DATABASES` section 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pcari',
+        'NAME': 'pcari', #make sure your database name is 'pcari'
         'USER': 'root',
         'PASSWORD': 'your_password',
     }
@@ -154,7 +154,7 @@ $ vim ~/.bashrc
 
 At the bottom of the file, add
 ```bash
-export mysql_pass="your_mysql_password"
+export mysql_pass="your_mysql_password" # make sure your environmental variable name is mysql_pass
 ```
 This will set `mysql_pass` as an environment variable on your machine permanently.
 
