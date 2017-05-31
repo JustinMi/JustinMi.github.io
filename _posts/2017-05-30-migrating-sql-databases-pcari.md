@@ -179,15 +179,9 @@ And you should be good!
 -------------
 
 # Step 6: Make Migrations
-We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
-```bash
-$ python manage.py makemigrations
-$ python manage.py migrate --run-syncdb
-```
-Finally, when your MySQL database is all set up, load all the data you saved in the dumpfile in step 3:
-```bash
-$ python manage.py loaddata datadump.json
-```
+We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database.
+
+Before we do so, however, we also need to edit a migrations so we avoid an error in the future. Go to `malasakit-v1 > malasakit-django > pcari > migrations > 0039_auto_20161024_1727.py` and and change all the `max_length=30` and `max_length=300 arguments to `max_length=255` which is the conventional amount. You can do this in your text editor using any "find-and-replace" commands. 
 
 ## A Note
 If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `DROP` the database and create a new one. To do so:
@@ -198,7 +192,19 @@ mysql> GRANT ALL PRIVILEGES ON pcari.* TO root@localhost;
 mysql> FLUSH PRIVILEGES;
 mysql> QUIT
 ```
-Then, you can try the migration again.
+Then, you can try the migration again. Ok, lets begin!
+
+The details are all abstracted away for you, so all you need to do is run:
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate --run-syncdb
+```
+Finally, when your MySQL database is all set up, load all the data you saved in the dumpfile in step 3:
+```bash
+$ python manage.py loaddata datadump.json
+```
+
+
 
 
 
