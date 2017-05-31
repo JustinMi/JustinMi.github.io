@@ -227,9 +227,9 @@ $ python manage.py loaddata datadump.json
 ## A Note
 If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `DROP` the database and create a new one. To do so:
 ```bash
-mysql> DROP DATABASE your_project_name;
-mysql> CREATE DATABASE your_project_name CHARACTER SET UTF8;
-mysql> GRANT ALL PRIVILEGES ON your_project_name.* TO your_username@localhost;
+mysql> DROP DATABASE pcari;
+mysql> CREATE DATABASE pcari CHARACTER SET UTF8;
+mysql> GRANT ALL PRIVILEGES ON pcari.* TO root@localhost;
 mysql> FLUSH PRIVILEGES;
 mysql> QUIT
 ```
