@@ -23,7 +23,7 @@ This tutorial will explain how to migrate a Django application running SQLite to
 # Step 1 (OS X): Downloading and Setting Up MySQL 
 _You can skip this step if you already have MySQL set up on your computer._
 
-First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). _Make sure to save the temporary root password they give you!_
+First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. _Make sure to save the temporary root password they give you!_ Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). 
 
 After you finish installing, double check that your server is running. On Mac OS, you can do this my going to System Preferences > MySQL. If not, you can turn it on through that menu.
 
@@ -153,7 +153,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'your_project_name',
         'USER': 'root',
-        'PASSWORD': 'your_password',
+        'PASSWORD': 'your_root_password',
         'HOST': 'your_host_address', 
         'PORT': 'your_port',
     }
@@ -171,7 +171,7 @@ $ vim ~/.bashrc
 
 At the bottom of the file, add
 ```bash
-export mysql_pass="your_mysql_password"
+export mysql_pass="your_root_password"
 ```
 This will set `mysql_pass` as an environment variable on your machine permanently.
 
@@ -183,7 +183,7 @@ $ vim name_of_your_shell_script.sh
 
 In the file, we will add the same line as before:
 ```bash
-export mysql_pass="your_mysql_password"
+export mysql_pass="your_root_password"
 ````
 
 Either way, you will have access to the environmental variable. 

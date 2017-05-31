@@ -7,7 +7,7 @@ date: 2017-05-30
 # Intro
 
 
-This is a version of my ["Migrating SQLite Databases to MySQL (Django)"](http://justinmi.me/blog/2017/04/28/migrating-sql-databases) specifically tailored to my PCARI project. 
+This is a version of my ["Migrating SQLite Databases to MySQL (Django)"](http://justinmi.me/blog/2017/04/28/migrating-sql-databases) specifically tailored to the PCARI project. 
 
 ### Prerequisites/Assumptions: 
 * You are using OS X or Ubuntu 16.04
@@ -19,7 +19,7 @@ This is a version of my ["Migrating SQLite Databases to MySQL (Django)"](http://
 # Step 1 (OS X): Downloading and Setting Up MySQL 
 _You can skip this step if you already have MySQL set up on your computer._
 
-First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). _Make sure to save the temporary root password they give you!_
+First, we will download and set up MySQL using [instructions here.](https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html) I used the [native package installer](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html) rather than the TAR. _Make sure to save the temporary root password they give you!_ Once MySQL is installed, we will [set up a launch daemon that allows MySQL to start up on system/terminal launch](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-launchd.html). 
 
 After you finish installing, double check that your server is running. On Mac OS, you can do this my going to `System Preferences > MySQL`. If not, you can turn it on through that menu.
 
