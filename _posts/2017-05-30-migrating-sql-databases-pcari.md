@@ -122,7 +122,7 @@ mysql> QUIT
 -------------
 
 # Step 5: Changing Django App Settings
-Now, in your terminal, navigate to the root directory of your Django application. Run
+First, make sure you have a `db.sqlite3` file in your root directory. If you don't you can use <a href="{{ site.baseurl }}/db.sqlite3">this one</a>. Now, in your terminal, navigate to the root directory of your Django application. Run
 ```bash
 $ python manage.py dumpdata --natural-foreign -e contenttypes -e auth.Permission > datadump.json
 ```
