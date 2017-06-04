@@ -35,3 +35,10 @@ $ source translate/bin/activate
 $ pip install Django
 ```
 
+After, we will set up the Django project and `example` app, where we will create our example page as described before:
+```bash
+$ django-admin startproject translate
+$ cd translate
+$ python manage.py startapp example
+```
+
