@@ -1,5 +1,9 @@
 .centering-wrapper {
-    text-align: center
+    text-align: center;
+}
+
+.image {
+    display: inline-block;
 }
 
 body {
