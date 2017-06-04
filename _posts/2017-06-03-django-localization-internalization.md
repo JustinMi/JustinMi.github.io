@@ -16,7 +16,7 @@ Luckily, Django has built-in functionality for localization and internalization 
 
 ### Prerequisites/Assumptions: 
 * You are using OS X or Linux
-* Your website is using Django 1.1 with Python 2.7
+* You are comfortable with using Django 1.1 with Python 2.7
 * You use `conda` or `virtualenv`
 
 # Overview and Setup
@@ -25,20 +25,20 @@ In this tutorial, we will be creating a super simple page that will display text
 ```bash
 $ conda create --name translate python=2
 $ source activate translate
+$ pip install Django
 ```
 
 Commands for `virtualenv`:
 ```bash
 $ virtualenv -p /usr/bin/python2.7 translate
 $ source translate/bin/activate
+$ pip install Django
 ```
 
-Then, we will install all dependencies we need:
-```bash
-$ pip install Django
-
-Then, we will set up the Django project:
+After, we will set up the Django project and app:
 ```bash
 $ django-admin startproject translate
+$ cd translate
+$ 
 ```
 
