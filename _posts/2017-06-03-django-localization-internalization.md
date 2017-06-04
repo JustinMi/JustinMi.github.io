@@ -22,4 +22,16 @@ Luckily, Django has built-in functionality for localization and internalization 
 # Overview and Setup
 
 In this tutorial, we will be creating a super simple example page that will display text and have a button that users can click to toggle the text between English and Filipino. To begin, we will create and activate a virtual environment using `conda` or `virtualenv`. Commands for `conda`:
+```bash
+$ conda create --name translate python=2
+$ source activate translate
+$ pip install Django
+```
+
+Commands for `virtualenv`:
+```bash
+$ virtualenv -p /usr/bin/python2.7 translate
+$ source translate/bin/activate
+$ pip install Django
+```
 
