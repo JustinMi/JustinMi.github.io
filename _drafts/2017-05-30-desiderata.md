@@ -4,7 +4,7 @@ title: "A Great Poem, From a Guy Who Doesn't Read Poems"
 date: 2017-05-30
 ---
 
-Already, from the title of this blog post you are aware that I do not read poems regularly. But I ran across a poem called Desiderata by Max Ehrmann and it really spoke to me. I found its simple but powerful language to be really appealing, breaking through the frills of deep metaphor and literary nuance that seems to requisite many poems. Before delving too much into my own thoughts and opinions on the piece, I want to let it make a case for itself:
+Already, from the title of this blog post you are aware that I do not read poems regularly. But I ran across a poem called _Desiderata_ by Max Ehrmann and it really spoke to me. I found its simple but powerful language to be really appealing, breaking through the frills of deep metaphor and literary nuance that seems to requisite many poems. Before delving too much into my own thoughts and opinions on the piece, I want to let it make a case for itself:
 
 -------------
 
