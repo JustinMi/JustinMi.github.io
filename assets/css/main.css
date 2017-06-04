@@ -1,3 +1,7 @@
+.centering-wrapper {
+    text-align: center
+}
+
 body {
     margin: 60px auto;
     width: 70%;
