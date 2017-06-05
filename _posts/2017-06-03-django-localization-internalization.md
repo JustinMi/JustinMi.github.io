@@ -186,25 +186,4 @@ translation_string = _("this string is can now be be translated")
 untranslated string = "this string will not be picked up by Django for translation"
 ```
 
-There is also a related fuction, `ugettext_lazy()`, that translates strings when they are accessed rather than when they are called. The translation itself will be done when the string is used in a string context, such as in template rendering. This is efficient when used in `models.py` or `forms.py`
-
-## Marking in Templates
-
-To make a string in a Django template translatable, we use the tag `{% trans %}`. The `{% trans %}` tag can translate both strings and variables:
-```html
-{% load i18n %}
-
-<p>{% trans "this string can be translated %}</p>
-<p>{% trans translation_var %}</p>
-```
-You need `{% load i18n %}` at the top of every template with the `{% trans %}` tag.
-
-As you may have guessed, `{% trans %}` is the template analog of `ugettext()`.
-
-
-
-
-
-
-If you add a comment starting with the keyword `Translators` in the line directly preceding the translation, , 
-
+There is also a related fuction, `ugettext_lazy()`, that translates strings when they are accessed rather than when they are called. The translation itself will be done when the string is used in a string context, such as in template rendering. This is efficient when used in `models.py` or `forms.py`.
