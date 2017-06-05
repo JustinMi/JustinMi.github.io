@@ -190,4 +190,4 @@ There is also a related fuction, `ugettext_lazy()`, that translates strings when
 
 ## Marking in Templates
 
-`{%  %}`
+`｛％ trans ％｝`
