@@ -42,3 +42,5 @@ $ cd translate
 $ python manage.py startapp example
 ```
 
+# Creating the 
+
