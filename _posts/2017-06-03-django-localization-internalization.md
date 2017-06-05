@@ -66,7 +66,7 @@ Now, we should have a project directory structure that looks something like this
         └── wsgi.py
 ```
 
-At this stage, you can run `python manage.py runserver` and navigate to <a href="http://127.0.0.1:8000/"></a> to double-check that Django shows its default landing page.
+At this stage, you can run `python manage.py runserver` and navigate to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> to double-check that Django shows its default landing page.
 
 # Creating the Static Page
 
@@ -97,7 +97,11 @@ We will now begin creating our example page. In our templates folder, we will cr
 ```
 Plain and simple. As a sneak peek ahead, we will allow users to convert `Hello world!` and the other paragraphs from English to Filipino or vice-versa with a click of a button. 
 
-Next, we will edit `settings.py` to allow Django to "recognize" the template we just made. In `translate/settings.py`, we will add `os.path.join(BASE_DIR, 'example/atemplates')` to `TEMPLATES` so the end result looks like this:
+# Rendering the Page
+
+In order to have the template we just created show up when we enter <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> into our browser, we must edit two files, `settings.py` and `views.py`, as well as create a file, `urls.py`. 
+
+First, we will edit `settings.py` to allow Django to "recognize" the template we just made. In `translate/settings.py`, we will add `os.path.join(BASE_DIR, 'example/atemplates')` to `TEMPLATES` so the end result looks like this:
 ```python
 TEMPLATES = [
     {
@@ -115,6 +119,22 @@ TEMPLATES = [
     },
 ]
 ```
+This will let Django know that a known directory that holds templates is at `example/templates`, and it will look there for any relevant templates. 
+
+
+After that, we will add a method to `examples/views.py` so we have a way for the [Django Controller](https://docs.djangoproject.com/en/1.11/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names) to communicate with the template. Edit your `views.py` so it looks like this:
+```
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def index(request):
+    return render(request, "translation_example.html")
+```
+All our `index` function does is make an API call to render the html we just wrote. The function will get a bit more complex than this later, but not by much.
+
+
+
 
 
 
