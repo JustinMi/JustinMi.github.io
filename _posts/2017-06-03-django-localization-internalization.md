@@ -201,4 +201,6 @@ You need `{％ load i18n ％}` at the top of every template with the `{％ trans
 
 As you may have guessed, `{％ trans ％}` is the template analog of `ugettext()`.
 
+# `*.po` Files
+
 If you add a comment starting with the keyword `Translators` in the line directly preceding the translation,
