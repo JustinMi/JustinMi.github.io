@@ -66,7 +66,7 @@ Now, we should have a project directory structure that looks something like this
         └── wsgi.py
 ```
 
-At this stage, you can run `python manage.py runserver` and navigate to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> to double-check that Django shows its default landing page.
+At this stage, we can run `python manage.py runserver` and navigate to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> to double-check that Django shows its default landing page.
 
 # Creating the Static Page
 
@@ -122,7 +122,7 @@ TEMPLATES = [
 This will let Django know that a known directory that holds templates is at `example/templates`, and it will look there for any relevant templates. 
 
 
-After that, we will add a method to `examples/views.py` so we have a way for the [Django Controller](https://docs.djangoproject.com/en/1.11/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names) to communicate with the template. Edit your `views.py` so it looks like this:
+After that, we will add a method to `examples/views.py` so we have a way for the [Django Controller](https://docs.djangoproject.com/en/1.11/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names) to communicate with the template. We will edit our `views.py` so it looks like this:
 ```python
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -160,7 +160,13 @@ Now, if we run `python manage.py runserver` and navigate to <a href="http://127.
 
 {% include image.html url="/assets/images/localization_blog_post/samplepage.png" description="The page you should see at this point" style="width=80%" %}
 
+# Intro to Django Translations
 
+Now that we finished the page that we want to translate, we can actually get started understanding exactly _how_ Django does translations. 
+
+At its core, Django's translation uses two things for its translation functionality: _hooks_, and `*.po` files. The hooks in Django are also called translation strings, which are literals on our website that we want translated. We as developers have to mark translation strings ourselves. `*.po` files are essentially mappings of translation strings to their corresponding string in a given language. The hooks and `*.po` files are then tied together with various things in the view, and we will get to the details of that later.
+
+While clearly helping with localization, this setup also helps with internalization by making translations modular--due to the tags, the same templates and views can be used in other projects with different language translations without fear of conflicts, as long as the base language is the same. Making edits to the translation strings to the same project is relatively painless as well. 
 
 
 
