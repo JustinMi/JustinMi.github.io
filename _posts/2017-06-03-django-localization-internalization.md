@@ -71,32 +71,6 @@ At this stage, you can run `python manage.py runserver` and navigate to <a href=
 # Creating the Static Page
 
 We will now begin creating our example page. In our templates folder, we will create a very simple `html` file called `translation_example.html` and set it up like so:
-```html
-<!DOCTYPE html>
-
-<html>
-
-<head>
-  <title>Example</title>
-</head>
-
-<body>
-  Hello world!
-  <p>
-    This is a paragraph
-  </p>
-  <p>
-    Another paragraph
-  </p>
-  <p>
-    Paragraph, part 3
-  </p>
-</body>
-
-</html>
-```
-Plain and simple. As a sneak peek ahead, we will allow users to convert `Hello world!` and the other paragraphs from English to Filipino or vice-versa with a click of a button. 
-
 
 
 
