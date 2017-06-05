@@ -190,4 +190,3 @@ There is also a related fuction, `ugettext_lazy()`, that translates strings when
 
 ## Marking in Templates
 
-To make a string in a Django template translatable, we use the tag `{% trans %}`. The `{% trans %}` tag can translate both strings and variables:
