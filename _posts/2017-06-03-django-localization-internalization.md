@@ -174,14 +174,32 @@ Django provides [several ways](https://docs.djangoproject.com/en/1.10/topics/i18
 
 ## Marking in Python
 
-To mark a string in Python to be translatable, we use the function `ugettext()`. Conventionally, people import the function as `_()` to save typing, since on a website with many strings to be translated having many `ugettext()` function calls can make the code very bulky and cluttered. 
+To make a string in Python translatable, we use the function `ugettext()`. Conventionally, people import the function as `_()` to save typing, since on a website with many strings to be translated having many `ugettext()` function calls can make the code very bulky and cluttered. 
 
 There is also a function `gettext()`, but `ugettext()` is more useful for us because it allows for unicode support. 
 
-Marking a string as translatable is very simple: we just call `_()` with the translation string as an argument. For example,
+Making string as translatable is very simple: we just call `_()` with the translation string as an argument. For example,
 ```python
 from django.utils.translation import ugettext as _
 
-translation_string = _("this string is now marked to be translated")
+translation_string = _("this string is can now be be translated")
 untranslated string = "this string will not be picked up by Django for translation"
 ```
+
+There is also a related fuction, `ugettext_lazy()`, that translates strings when they are accessed rather than when they are called. The translation itself will be done when the string is used in a string context, such as in template rendering. This is efficient when used in `models.py` or `forms.py`
+
+## Marking in Templates
+
+To make a string in a Django template translatable, we use the tag `{% trans %}`. The `{% trans %}` tag can translate both strings and variables:
+```html
+<p>{% trans "this string can be translated %}</p>
+<p>{% trans translation_var %}</p>
+```
+
+
+
+
+
+
+If you add a comment starting with the keyword `Translators` in the line directly preceding the translation, , 
+
