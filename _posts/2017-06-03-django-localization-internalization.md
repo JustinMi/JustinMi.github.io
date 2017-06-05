@@ -99,7 +99,7 @@ Plain and simple. As a sneak peek ahead, we will allow users to convert `Hello w
 
 # Rendering the Page
 
-In order to have the template we just created show up when we enter <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> into our browser, we must edit two files, `settings.py` and `views.py`, as well as create a file, `urls.py`. 
+In order to have the template we just created show up when we enter <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> into our browser, we must edit three files, `settings.py`, `urls.py` and `views.py`, as well as create another `urls.py` in our `example` app folder. 
 
 First, we will edit `settings.py` to allow Django to "recognize" the template we just made. In `translate/settings.py`, we will add `os.path.join(BASE_DIR, 'example/atemplates')` to `TEMPLATES` so the end result looks like this:
 ```python
@@ -123,7 +123,7 @@ This will let Django know that a known directory that holds templates is at `exa
 
 
 After that, we will add a method to `examples/views.py` so we have a way for the [Django Controller](https://docs.djangoproject.com/en/1.11/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names) to communicate with the template. Edit your `views.py` so it looks like this:
-```
+```python
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -133,6 +133,28 @@ def index(request):
 ```
 All our `index` function does is make an API call to render the html we just wrote. The function will get a bit more complex than this later, but not by much.
 
+Next, we will create a `urls.py` file in `examples` to help with URL routing. Add the following to the `urls.py` file:
+```python
+from django.conf.urls import url
+from example import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+]
+```
+
+Finally, we will edit `translate/urls.py` to accomodate that newly created `examples/urls.py`. Edit the `translate/urls.py` to look like this:
+```python
+from django.conf.urls import include, url
+from django.contrib import admin
+import example
+
+urlpatterns = [
+    url(r'^$', include('example.urls')),
+    url(r'^admin/', admin.site.urls),
+]
+```
+This means that whenever a user enters <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>, Django will process the URL in `translate/urls.py` then send the URL to `examples/urls.py` for further processing through the `include` function call. In `examples/urls.py`, Django then calls the `views.index` function, which renders the `translation_example.html` template in our browser through the `render` function call. 
 
 
 
