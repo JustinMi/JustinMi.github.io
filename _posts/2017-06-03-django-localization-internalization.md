@@ -86,15 +86,6 @@ We will now begin creating our example page. In our templates folder, we will cr
 
 <body>
   Hello world!
-  <p>
-    This is a paragraph
-  </p>
-  <p>
-    Another paragraph
-  </p>
-  <p>
-    Paragraph, part 3
-  </p>
 </body>
 
 </html>
@@ -268,6 +259,65 @@ Finally, inform Django of our `example/locale` directory so it knows where to pu
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'example/locale'),
 )
+```
+
+Now we have finished setting up Django to handle translations! To create the `.po` file, first install `gettext`. In OS X (assuming you have (homebrew installed)[https://brew.sh/]):
+```bash
+$ brew install gettext
+$ brew link gettext --force
+```
+Then, enter
+```bash
+$ python manage.py makemessages -l tl
+```
+
+Now, if you check your `locale` directory, you should find a `LC_MESSAGES` directory automatically generated inside, and inside that will be a `django.po` file. That's the `.po` file that I've been talking about this entire time! Finally, we got to it! Let's check it out. This is what the file contents should look like (I've annotated it for your understanding):
+```
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-05 23:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Contaent-Transfer-Encoding: 8bit\n"
+
+#: translate/settings.py:120
+msgid "English"
+msgstr ""
+
+#: translate/settings.py:121
+msgid "Tagalog"
+msgstr ""
+```
+
+Next, we will mark strings in `translation_example.html` for translation, like so:
+```html
+{% load i18n %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Example</title>
+</head>
+
+<body>
+  {％ trans "Hello world!" ％}
+</body>
+
+</html>
 ```
 
 If you add a comment starting with the keyword `Translators` in the line directly preceding the translation,
