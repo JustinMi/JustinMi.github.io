@@ -215,9 +215,13 @@ As you may have guessed, `{％ trans ％}` is the template analog of `ugettext()
 
 As discussed before, `.po` files are like dictionaries that pair the default language (usually English) with another language. But before we discuss the details, I think that actually having a `.po` file that we can look at and play around with can be beneficial. So let's make one!
 
-To do so, we first need to edit `settings.py` again to make sure Django is set up to do translations. Make sure that 
+To do so, we first need to create a `locale` folder in `examples/`. This is where our `.po` file will eventually live. Edit `settings.py` again to make sure Django is set up to do translations. Make sure that 
 ```python
 USE_I18N = True
+```
+and that you have imported `ugettext_lazy`:
+```python
+from django.utils.translation import ugettext_lazy as _
 ```
 
 Then, in the `TEMPLATES['OPTIONS']['context_processors']` setting, add `django.template.context_processors.i18n`:
@@ -245,5 +249,20 @@ MIDDLEWARE_CLASSES = (
     ...
 )
 ```
+
+Specify the languages we want to use:
+```python
+LANGUAGES = (
+    ('en-us', _('English')),
+    ('tl', _('Tagalog')),
+)
+```
+
+Make sure the language code is in English: 
+```python
+LANGUAGE_CODE = 'en-us'
+```
+
+Finally, 
 
 If you add a comment starting with the keyword `Translators` in the line directly preceding the translation,
