@@ -160,13 +160,28 @@ Now, if we run `python manage.py runserver` and navigate to <a href="http://127.
 
 {% include image.html url="/assets/images/localization_blog_post/samplepage.png" description="The page you should see at this point" style="width=80%" %}
 
-# Intro to Django Translations
+# Overview to Django Translations
 
 Now that we finished the page that we want to translate, we can actually get started understanding exactly _how_ Django does translations. 
 
-At its core, Django's translation uses two things for its translation functionality: _hooks_, and `*.po` files. The hooks in Django are also called translation strings, which are literals on our website that we want translated. We as developers have to mark translation strings ourselves. `*.po` files are essentially mappings of translation strings to their corresponding string in a given language. The hooks and `*.po` files are then tied together with various things in the view, and we will get to the details of that later.
+At its core, Django's translation uses two things for its translation functionality: _hooks_, and `*.po` files. The hooks in Django are also called _translation strings_, which are literals on our website that we want translated. We as developers have to mark translation strings ourselves. `*.po` files are essentially mappings of translation strings to their corresponding string in a given language. The hooks and `*.po` files are then tied together with various things in the view. We will get to the details of everything later.
 
 While clearly helping with localization, this setup also helps with internalization by making translations modular--due to the tags, the same templates and views can be used in other projects with different language translations without fear of conflicts, as long as the base language is the same. Making edits to the translation strings to the same project is relatively painless as well. 
 
+# Translation Strings
 
+Django provides [several ways](https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#module-django.conf.urls.i18n) of marking strings as being translatable, but I will focus on just two today: marking in Python and marking in template code. 
 
+## Marking in Python
+
+To mark a string in Python to be translatable, we use the function `ugettext()`. Conventionally, people import the function as `_()` to save typing, since on a website with many strings to be translated having many `ugettext()` function calls can make the code very bulky and cluttered. 
+
+There is also a function `gettext()`, but `ugettext()` is more useful for us because it allows for unicode support. 
+
+Marking a string as translatable is very simple: we just call `_()` with the translation string as an argument. For example,
+```python
+from django.utils.translation import ugettext as _
+
+translation_string = _("this string is now marked to be translated")
+untranslated string = "this string will not be picked up by Django for translation"
+```
