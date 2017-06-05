@@ -21,6 +21,8 @@ Luckily, Django has built-in functionality for localization and internalization 
 * You are comfortable with using Django 1.1 with Python 2.7
 * You use `conda` or `virtualenv`
 
+-------------
+
 # Overview and Setup
 
 In this tutorial, we will be creating a super simple proof-of-concept example page that will display text and have a button that users can click to toggle the text between English and Filipino. To begin, we will setup a new virtual environment using `conda` or `virtualenv`. Commands for `conda`:
@@ -67,6 +69,8 @@ Now, we should have a project directory structure that looks something like this
 ```
 
 At this stage, we can run `python manage.py runserver` and navigate to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> to double-check that Django shows its default landing page.
+
+-------------
 
 # Creating the Static Page
 
@@ -160,6 +164,8 @@ Now, if we run `python manage.py runserver` and navigate to <a href="http://127.
 
 {% include image.html url="/assets/images/localization_blog_post/samplepage.png" description="The page you should see at this point" style="width=80%" %}
 
+-------------
+
 # Overview to Django Translations
 
 Now that we finished the page that we want to translate, we can actually get started understanding exactly _how_ Django does translations. 
@@ -167,6 +173,8 @@ Now that we finished the page that we want to translate, we can actually get sta
 At its core, Django's translation uses two things for its translation functionality: _hooks_, and `*.po` files. The hooks in Django are also called _translation strings_, which are literals on our website that we want translated. We as developers have to mark translation strings ourselves. `*.po` files are essentially mappings of translation strings to their corresponding string in a given language. The hooks and `*.po` files are then tied together with various things in the view. We will get to the details of everything later.
 
 While clearly helping with localization, this setup also helps with internalization by making translations modular--due to the tags, the same templates and views can be used in other projects with different language translations without fear of conflicts, as long as the base language is the same. Making edits to the translation strings to the same project is relatively painless as well. 
+
+-------------
 
 # Translation Strings
 
@@ -201,6 +209,10 @@ You need `{％ load i18n ％}` at the top of every template with the `{％ trans
 
 As you may have guessed, `{％ trans ％}` is the template analog of `ugettext()`.
 
-# `*.po` Files
+-------------
+
+# *.po Files
+
+Before we 
 
 If you add a comment starting with the keyword `Translators` in the line directly preceding the translation,
