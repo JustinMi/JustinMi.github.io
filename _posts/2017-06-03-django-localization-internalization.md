@@ -170,7 +170,7 @@ Now, if we run `python manage.py runserver` and navigate to <a href="http://127.
 
 Now that we finished the page that we want to translate, we can actually get started understanding exactly _how_ Django does translations. 
 
-At its core, Django's translation uses two things for its translation functionality: _hooks_, and `*.po` files. The hooks in Django are also called _translation strings_, which are literals on our website that we want translated. We as developers have to mark translation strings ourselves. `*.po` files are essentially mappings of translation strings to their corresponding string in a given language. The hooks and `*.po` files are then tied together with various things in the view. We will get to the details of everything later.
+At its core, Django's translation uses two things for its translation functionality: _hooks_, and `.po` files. The hooks in Django are also called _translation strings_, which are literals on our website that we want translated. We as developers have to mark translation strings ourselves. `.po` files are essentially mappings of translation strings to their corresponding string in a given language. The hooks and `.po` files are then tied together with various things in the view. We will get to the details of everything later.
 
 While clearly helping with localization, this setup also helps with internalization by making translations modular--due to the tags, the same templates and views can be used in other projects with different language translations without fear of conflicts, as long as the base language is the same. Making edits to the translation strings to the same project is relatively painless as well. 
 
@@ -211,8 +211,39 @@ As you may have guessed, `{％ trans ％}` is the template analog of `ugettext()
 
 -------------
 
-# *.po Files
+# .po Files
 
-Before we 
+As discussed before, `.po` files are like dictionaries that pair the default language (usually English) with another language. But before we discuss the details, I think that actually having a `.po` file that we can look at and play around with can be beneficial. So let's make one!
+
+To do so, we first need to edit `settings.py` again to make sure Django is set up to do translations. Make sure that 
+```python
+USE_I18N = True
+```
+
+Then, in the `TEMPLATES['OPTIONS']['context_processors']` setting, add `django.template.context_processors.i18n`:
+```python
+TEMPLATES = [
+    {
+        ...
+        'OPTIONS': {
+            'context_processors': [
+                ...
+                'django.template.context_processors.i18n',
+            ],
+        },
+    },
+]
+```
+
+Add `'django.middleware.locale.LocaleMiddleware',` in the position as shown, to be able to determine a user's language preference through the `request` variable:
+```python
+MIDDLEWARE_CLASSES = (
+    ...
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    ...
+)
+```
 
 If you add a comment starting with the keyword `Translators` in the line directly preceding the translation,
