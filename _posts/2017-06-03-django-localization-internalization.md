@@ -23,7 +23,7 @@ Luckily, Django has built-in functionality for localization and internalization 
 
 # Overview and Setup
 
-In this tutorial, we will be creating a super simple example page that will display text and have a button that users can click to toggle the text between English and Filipino. To begin, we will create and activate a virtual environment using `conda` or `virtualenv`. Commands for `conda`:
+In this tutorial, we will be creating a super simple example page that will display text and have a button that users can click to toggle the text between English and Filipino. To begin, we will setup a new virtual environment using `conda` or `virtualenv`. Commands for `conda`:
 ```bash
 $ conda create --name translate python=2
 $ source activate translate
@@ -44,7 +44,60 @@ $ cd translate
 $ python manage.py startapp example
 ```
 
-# Creating the static page
+Now, we should have a project directory structure that looks something like this:
+```
+└── translate
+    ├── db.sqlite3
+    ├── manage.py
+    ├── example
+    │   ├── migrations
+    │   │   └── __init__.py
+    │   ├── templates
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   └── views.py
+    └── translate
+        ├── __init__.py
+        ├── settings.py
+        ├── urls.py
+        └── wsgi.py
+```
+
+At this stage, you can run `python manage.py runserver` and navigate to <a href="http://127.0.0.1:8000/"></a> to double-check that Django shows its default landing page.
+
+# Creating the Static Page
+
+We will now begin creating our example page. In our templates folder, we will create a very simple `html` file called `translation_example.html` and set it up like so:
+```html
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Example</title>
+</head>
+
+<body>
+  Hello world!
+  <p>
+    This is a paragraph
+  </p>
+  <p>
+    Another paragraph
+  </p>
+  <p>
+    Paragraph, part 3
+  </p>
+</body>
+
+</html>
+```
+Plain and simple. As a sneak peek ahead, we will allow users to convert `Hello world!` and the other paragraphs from English to Filipino or vice-versa with a click of a button. 
+
+
 
 
 
