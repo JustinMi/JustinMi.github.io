@@ -23,7 +23,7 @@ Luckily, Django has built-in functionality for localization and internalization 
 
 # Overview and Setup
 
-In this tutorial, we will be creating a super simple example page that will display text and have a button that users can click to toggle the text between English and Filipino. To begin, we will setup a new virtual environment using `conda` or `virtualenv`. Commands for `conda`:
+In this tutorial, we will be creating a super simple proof-of-concept example page that will display text and have a button that users can click to toggle the text between English and Filipino. To begin, we will setup a new virtual environment using `conda` or `virtualenv`. Commands for `conda`:
 ```bash
 $ conda create --name translate python=2
 $ source activate translate
@@ -155,6 +155,10 @@ urlpatterns = [
 ]
 ```
 This means that whenever a user enters <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>, Django will process the URL in `translate/urls.py` then send the URL to `examples/urls.py` for further processing through the `include` function call. In `examples/urls.py`, Django then calls the `views.index` function, which renders the `translation_example.html` template in our browser through the `render` function call. 
+
+Now, if we run `python manage.py runserver` and navigate to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>, we will hopefully see something like
+
+{% include image.html url="/assets/images/localization_blog_post/samplepage.png" description="The page you should see at this point" style="width=80%" %}
 
 
 
