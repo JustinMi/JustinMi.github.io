@@ -44,34 +44,6 @@ $ cd translate
 $ python manage.py startapp example
 ```
 
-Now, we should have a project directory structure that looks something like this:
-```
-└── translate
-    ├── db.sqlite3
-    ├── manage.py
-    ├── example
-    │   ├── migrations
-    │   │   └── __init__.py
-    │   ├── templates
-    │   ├── __init__.py
-    │   ├── admin.py
-    │   ├── apps.py
-    │   ├── models.py
-    │   ├── tests.py
-    │   └── views.py
-    └── translate
-        ├── __init__.py
-        ├── settings.py
-        ├── urls.py
-        └── wsgi.py
-```
-
-At this stage, you can run `python manage.py runserver` and navigate to <a href="http://127.0.0.1:8000/"></a> to double-check that Django shows its default landing page.
-
-# Creating the Static Page
-
-We will now begin creating our example page. In our templates folder, we will create a very simple `html` file called `translation_example.html` and set it up like so:
-
 
 
 
