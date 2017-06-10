@@ -124,7 +124,7 @@ mysql> QUIT
 # Step 5: Changing Django App Settings
 First, make sure you have a `db.sqlite3` file in your root directory. If you don't you can use <a href="{{ site.baseurl }}/db.sqlite3">this one</a>. Now, in your terminal, navigate to the root directory of your Django application. Run
 ```bash
-$ python manage.py dumpdata --natural-foreign -e contenttypes -e auth.Permission > datadump.json
+$ python manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 > datadump.json
 ```
 This will create a dumpfile of the data stored in your SQLite database. the `--natural-foreign` argument serializes foreign keys, since you are transitioning to a new database. The `-e contenttypes -e auth.Permission` arguments exclude tables that would cause Django to throw an `IntegrityError`. Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
 ```bash
@@ -182,6 +182,8 @@ And you should be good!
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database.
 
 Before we do so, however, we also need to edit a migrations so we avoid an error in the future. Go to `malasakit-v1 > malasakit-django > pcari > migrations > 0039_auto_20161024_1727.py` and and change all the `max_length=30` and `max_length=300 arguments to `max_length=255` which is the conventional amount. You can do this in your text editor using any "find-and-replace" commands. 
+
+Also, in `0052_auto_20170609_1902.py` and `models.py` I changed the `max_length` of `langauge = models.Charfield` to 25. 
 
 ## A Note
 If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `DROP` the database and create a new one. To do so:

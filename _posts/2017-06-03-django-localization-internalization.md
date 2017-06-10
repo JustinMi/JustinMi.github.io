@@ -266,12 +266,18 @@ Now we have finished setting up Django to handle translations! To create the `.p
 $ brew install gettext
 $ brew link gettext --force
 ```
+
+In Ubuntu:
+```bash
+sudo get-apt gettext
+```
+
 Then, enter
 ```bash
 $ python manage.py makemessages -l tl
 ```
 
-Now, if you check your `locale` directory, you should find a `LC_MESSAGES` directory automatically generated inside, and inside that will be a `django.po` file. That's the `.po` file that I've been talking about this entire time! Finally, we got to it! Let's check it out. This is what the file contents should look like (I've annotated it for your understanding):
+Now, if you check your `locale` directory, you should find a `LC_MESSAGES` directory automatically generated inside, and inside that will be a `django.po` file. That's the `.po` file that I've been talking about this entire time! Finally, we got to it! Let's check it out. This is what the file contents should look like:
 ```
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
@@ -300,8 +306,20 @@ msgstr ""
 msgid "Tagalog"
 msgstr ""
 ```
+The first half is just a template of administrative details, usually intended for the translators to read. The core of the file is in the second half:
+``` 
+#: translate/settings.py:120
+msgid "English"
+msgstr ""
 
-Next, we will mark strings in `translation_example.html` for translation, like so:
+#: translate/settings.py:121
+msgid "Tagalog"
+msgstr ""
+```
+
+`msgid` is short for "message id", and that is the translation string that Django will search for in views, models, templates, forms, etc. when making translations. `msgstr` is short for "message string" and it is the `msgid` translated into the alternate language. Each `msgid`/`msgstr` block of code can be seen as a key-value pair in a dictionary, where Django searches the project for keys (`msgid`) that it can replace with values (`msgstr`). The `msgstr` values need to be filled out by hand, and usually there will be a translator (human or Google) that can help with that. Be careful! In this case, line breaks matter, as an extra line break may mean messed up `msgid`/`msgstr` pairs and thus messed up translations. 
+
+Now, lets try marking strings in `translation_example.html` for translation, like so:
 ```html
 {% load i18n %}
 
@@ -320,4 +338,22 @@ Next, we will mark strings in `translation_example.html` for translation, like s
 </html>
 ```
 
-If you add a comment starting with the keyword `Translators` in the line directly preceding the translation,
+Then, enter
+```bash
+$ python manage.py makemessages -l tl
+```
+again. 
+
+If you check your `django.po` file now, you will see an extra block of code:
+```
+#: example/templates/translation_example.html:12
+msgid "Hello world!"
+msgstr ""
+```
+Django automatically identified the string to be translated, and updated `django.po` to reflect that!
+
+
+
+
+
+
