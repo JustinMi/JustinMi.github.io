@@ -321,7 +321,7 @@ msgstr ""
 
 Now, lets try marking strings in `translation_example.html` for translation, like so:
 ```html
-{% load i18n %}
+{％ load i18n ％}
 
 <!DOCTYPE html>
 
