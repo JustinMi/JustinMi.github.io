@@ -202,17 +202,9 @@ Then, you can try the migration again. Ok, lets begin!
 
 The details are all abstracted away for you, so all you need to do is run:
 ```bash
-$ python manage.py makemigrations
 $ python manage.py migrate --run-syncdb
 ```
-Finally, when your MySQL database is all set up, load all the data you saved in the dumpfile in step 3:
-```bash
-$ python manage.py loaddata datadump.json
-```
-
-
-
-
+Do not run `makemigrations`, as Jonathan as written up a custom migration.
 
 -------------
 
