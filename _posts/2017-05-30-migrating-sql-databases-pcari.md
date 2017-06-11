@@ -122,11 +122,7 @@ mysql> QUIT
 -------------
 
 # Step 5: Changing Django App Settings
-First, make sure you have a `db.sqlite3` file in your root directory. If you don't you can use <a href="{{ site.baseurl }}/db.sqlite3">this one</a>. Now, in your terminal, navigate to the root directory of your Django application. Run
-```bash
-$ python manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 > datadump.json
-```
-This will create a dumpfile of the data stored in your SQLite database. the `--natural-foreign` argument serializes foreign keys, since you are transitioning to a new database. The `-e contenttypes -e auth.Permission` arguments exclude tables that would cause Django to throw an `IntegrityError`. Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
+Then, install the relevent dependencies in your Python environment using `pip` or `conda`:
 ```bash
 $ pip install MySQL-python
 ```
@@ -182,6 +178,8 @@ And you should be good!
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database.
 
 Before we do so, however, we also need to edit a migrations so we avoid an error in the future. Go to `malasakit-v1 > malasakit-django > pcari > migrations > 0039_auto_20161024_1727.py` and and change all the `max_length=30` and `max_length=300 arguments to `max_length=255` which is the conventional amount. You can do this in your text editor using any "find-and-replace" commands. 
+
+{% include image.html url="/assets/images/localization_blog_post/endclothing.png" description="An example of a webstore that offers differing versions of its website depending on the country it is shipping to" style="width=80%" %}
 
 Also, in `0052_auto_20170609_1902.py` and `models.py` I changed the `max_length` of `langauge = models.Charfield` to 25. 
 
