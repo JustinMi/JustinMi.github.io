@@ -177,11 +177,13 @@ And you should be good!
 # Step 6: Make Migrations
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database.
 
-Before we do so, however, we also need to edit a migrations so we avoid an error in the future. Go to `malasakit-v1 > malasakit-django > pcari > migrations > 0039_auto_20161024_1727.py` and and change all the `max_length=30` and `max_length=300 arguments to `max_length=255` which is the conventional amount. You can do this in your text editor using any "find-and-replace" commands. 
+Before we do so, however, we also need to edit a migrations so we avoid an error when migrating. Go to `malasakit-v1 > malasakit-django > pcari > migrations > 0039_auto_20161024_1727.py` and and change all the `max_length=30` and `max_length=300 arguments to `max_length=255` which is the conventional amount. You can do this in your text editor using any "find-and-replace" commands. 
 
-{% include image.html url="/assets/images/pcari_sql_blog_post/change-max-length.png" description="An example of a webstore that offers differing versions of its website depending on the country it is shipping to" style="width=80%" %}
+{% include image.html url="/assets/images/pcari_sql_blog_post/change-max-length.png" description="Change all the max_length attributes to max_length=255" style="width=60%" %}
 
-Also, in `0052_auto_20170609_1902.py` and `models.py` I changed the `max_length` of `langauge = models.Charfield` to 25. 
+Also, in `0052_auto_20170609_1902.py` and `models.py` I changed the `max_length` of `langauge = models.Charfield` to `max_length=25`. 
+
+{% include image.html url="/assets/images/pcari_sql_blog_post/change-max-length2.png" description="Change all the max_length attributes to max_length=25" style="width=60%" %}
 
 ## A Note
 If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `DROP` the database and create a new one. To do so:
