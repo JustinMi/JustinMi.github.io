@@ -179,7 +179,7 @@ We are in the home stretch! Now, all we need to do is apply any migrations you m
 
 Before we do so, however, we also need to edit a migrations so we avoid an error in the future. Go to `malasakit-v1 > malasakit-django > pcari > migrations > 0039_auto_20161024_1727.py` and and change all the `max_length=30` and `max_length=300 arguments to `max_length=255` which is the conventional amount. You can do this in your text editor using any "find-and-replace" commands. 
 
-{% include image.html url="/assets/images/localization_blog_post/endclothing.png" description="An example of a webstore that offers differing versions of its website depending on the country it is shipping to" style="width=80%" %}
+{% include image.html url="/assets/images/pcari_sql_blog_post/change-max-length.png" description="An example of a webstore that offers differing versions of its website depending on the country it is shipping to" style="width=80%" %}
 
 Also, in `0052_auto_20170609_1902.py` and `models.py` I changed the `max_length` of `langauge = models.Charfield` to 25. 
 
