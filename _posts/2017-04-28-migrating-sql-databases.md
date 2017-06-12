@@ -113,7 +113,7 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
 Now, you have your root user set up and can log into it using your own password. 
 
 If you want to create your own user, enter
-```bash
+```mysql
 mysql> CREATE USER 'your_new_username'@'localhost' IDENTIFIED BY 'new_password';
 mysql> GRANT ALL PRIVILEGES ON * . * TO 'your_new_username'@'localhost';
 mysql> FLUSH PRIVILEGES;
@@ -124,7 +124,7 @@ the `* . *` allows the user to have all access to the databases and tables in th
 
 # Step 4: Creating the Project Database
 Then, to create the database for your project:
-```
+```mysql
 mysql> CREATE DATABASE your_project_name CHARACTER SET UTF8;
 mysql> GRANT ALL PRIVILEGES ON your_project_name.* TO your_username@localhost;
 mysql> FLUSH PRIVILEGES;
@@ -214,6 +214,18 @@ And you should be good!
 -------------
 
 # Step 6: Make Migrations
+
+## A Note
+If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `DROP` the database and create a new one. To do so:
+```mysql
+mysql> DROP DATABASE pcari;
+mysql> CREATE DATABASE pcari CHARACTER SET UTF8;
+mysql> GRANT ALL PRIVILEGES ON pcari.* TO root@localhost;
+mysql> FLUSH PRIVILEGES;
+mysql> QUIT
+```
+Then, you can try the migration again. Ok, let's begin!
+
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database. The details are all abstracted away for you, so all you need to do is run:
 ```bash
 $ python manage.py makemigrations
@@ -224,16 +236,6 @@ Finally, when your MySQL database is all set up, load all the data you saved in 
 $ python manage.py loaddata datadump.json
 ```
 
-## A Note
-If your migration fails, you may need to do some debugging. Every case may be different, so I cannot give much advice here, unfortunately. However, if you want to retry a migration after making some changes, you will need to start with an empty database. To do that, we will `DROP` the database and create a new one. To do so:
-```bash
-mysql> DROP DATABASE pcari;
-mysql> CREATE DATABASE pcari CHARACTER SET UTF8;
-mysql> GRANT ALL PRIVILEGES ON pcari.* TO root@localhost;
-mysql> FLUSH PRIVILEGES;
-mysql> QUIT
-```
-Then, you can try the migration again.
 
 
 
