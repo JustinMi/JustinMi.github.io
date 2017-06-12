@@ -177,11 +177,11 @@ And you should be good!
 # Step 6: Make Migrations
 We are in the home stretch! Now, all we need to do is apply any migrations you made to the new MySQL database.
 
-Before we do so, however, we also need to edit a migrations so we avoid an error when migrating. Go to `malasakit-v1 > malasakit-django > pcari > migrations > 0039_auto_20161024_1727.py` and and change all the `max_length=30` and `max_length=300 arguments to `max_length=255` which is the conventional amount. You can do this in your text editor using any "find-and-replace" commands. 
+Before we do so, however, we also need to edit a migrations so we avoid an error when migrating. Go to `malasakit-v1 > malasakit-django > pcari > migrations > 0039_auto_20161024_1727.py` and and change all the `max_length=30` and `max_length=300 arguments to `max_length=255` which is the conventional amount. This is because some input strings may be more than 30 characters long, so we need to account for that. You can do this in your text editor using any "find-and-replace" commands. 
 
 {% include image.html url="/assets/images/pcari_sql_blog_post/change-max-length.png" description="Change all the max_length attributes to max_length=255" style="width=50%" %}
 
-Also, in `0052_auto_20170609_1902.py` and `models.py` I changed the `max_length` of `langauge = models.Charfield` to `max_length=25`. 
+Also, in `0052_auto_20170609_1902.py` and `models.py` I changed the `max_length` of `langauge = models.Charfield` to `max_length=25`. This is also to account for the differences in string length.  
 
 {% include image.html url="/assets/images/pcari_sql_blog_post/change-max-length2.png" description="Change all the max_length attributes to max_length=25" style="width=50%" %}
 
@@ -205,6 +205,19 @@ The details are all abstracted away for you, so all you need to do is run:
 $ python manage.py migrate --run-syncdb
 ```
 Do not run `makemigrations`, as Jonathan as written up a custom migration.
+
+Finally, to load all the data from the old database, we checkout our git `HEAD` to an older commit, get a data dumpfile from that older `db.sqlite3` file, and then switch back to our current commit. Here are the steps to doing so:
+```bash
+$ git checkout cc83f886101a96369cae20796f0433759b4a9ada  # This is the README update commit on `master` (using SQLite)
+$ python2 manage.py dumpdata --natural-primary --natural-foreign > data.json
+$ git checkout your_working_branch  # Go back to the latest commit on your working branch with the MySQL configuration
+$ python2 manage.py loaddata data.json
+```
+
+You should see a message like 
+```bash
+Installed 9522 object(s) from 1 fixture(s)
+```
 
 -------------
 
