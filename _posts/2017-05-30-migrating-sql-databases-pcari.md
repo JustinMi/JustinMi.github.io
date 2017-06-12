@@ -103,7 +103,7 @@ Now we are ready to use MySQL! Enter
 $ mysql -u root -p
 ```
 Log in using your root password. If this is your first time logging in, use the password that you saved in step 1. Now, if you want to change the root password to something of your own preference, in the MySQL shell, enter
-```bash
+```mysql
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
 ```
 Now, you have your root user set up and can log into it using your own password. 
@@ -112,7 +112,7 @@ Now, you have your root user set up and can log into it using your own password.
 
 # Step 4: Creating the Project Database
 Then, to create the database for your project (please be sure to name the database `pcari` to limit conflicts in version control):
-```bash
+```mysql
 mysql> CREATE DATABASE pcari CHARACTER SET UTF8;
 mysql> GRANT ALL PRIVILEGES ON pcari.* TO root@localhost;
 mysql> FLUSH PRIVILEGES;
