@@ -133,6 +133,7 @@ Next, we will create a `urls.py` file in `examples` to help with URL routing. Ad
 from django.conf.urls import url
 from example import views
 
+app_name = "example"
 urlpatterns = [
     url(r'^$', views.index, name='index'),
 ]
@@ -387,9 +388,7 @@ Next, to be able to see the translation, we will add a button we can click to to
 </html>
 ```
 
-We used a `<form>` tag to create a HTML submit button that makes a POST request to `example:index` URL, which Django will redirect to the `index` view function in the `example` app. 
-
-Then, we will edit our `views.py` to provide the appropriate response to the POST request.
+We used a `<form>` tag to create a HTML submit button that makes a POST request to `example:index` URL, which Django will redirect to the `index` view function in the `example` app. That means we will need to edit our `views.py` to provide the appropriate response to the POST request.
 ```python
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -431,5 +430,4 @@ def switch_language(request):
         
 ```
 
-
-
+To alter the language currently displayed, we will change `request.session` by setting the `LANGUAGE_SESSION_KEY` to either `"tl"` or `"en"`. The `switch_language` helper function is just used to switch between `"en"` and `"tl"`. In the `index`, we added some logic control--if the request we recieved was a POST request (i.e. the user pressed the 'Translate' button) we will alter the request `LANGUAGE_SESSION_KEY` by calling `switch_language`. Otherwise, we will use the default `"en"` language. Finaly, after editing the `request` object, we will still return `render(request, "translation_example.html")` as before.
