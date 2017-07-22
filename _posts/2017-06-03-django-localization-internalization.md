@@ -364,7 +364,7 @@ msgstr "Kumusta mundo!"
 
 Next, to be able to see the translation, we will add a button we can click to toggle the translation. Update `translate_example.html` such that it looks like this:
 ```html
-{% load i18n %}
+{％ load i18n ％}
 
 <!DOCTYPE html>
 
@@ -376,16 +376,17 @@ Next, to be able to see the translation, we will add a button we can click to to
 
 <body>
 <!-- Current language: {{ LANGUAGE_CODE }} -->
-  {% trans "Hello world!" %}
+  {％ trans "Hello world!" ％}
 
-  <form action="{% url 'example:index' %}" method="post">
-    {% csrf_token %}
+  <form action="{％ url 'example:index' ％}" method="post">
+    {％ csrf_token ％}
     <input type="submit" value="Translate" />
   </form>
 </body>
 
 </html>
 ```
+
 
 
 
