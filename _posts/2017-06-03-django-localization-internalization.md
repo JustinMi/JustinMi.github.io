@@ -387,7 +387,49 @@ Next, to be able to see the translation, we will add a button we can click to to
 </html>
 ```
 
+We used a `<form>` tag to create a HTML submit button that makes a POST request to `example:index` URL, which Django will redirect to the `index` view function in the `example` app. 
 
+Then, we will edit our `views.py` to provide the appropriate response to the POST request.
+```python
+from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
+from django.utils.translation import LANGUAGE_SESSION_KEY
+from django.utils import translation
+
+from .forms import ChangeLanguage
+
+# Create your views here.
+def index(request):
+    # if this is a POST request we need to switch the language
+    if request.method == 'POST':
+        request = switch_language(request)
+    # if a GET (or any other method) we'll generate the page in English
+    else:
+        request.session[LANGUAGE_SESSION_KEY] = "en"
+        translation.activate("en")
+
+    return render(request, "translation_example.html")
+
+def switch_language(request):
+    """
+    Switch the LANGUAGE_SESSION_KEY in request object from 'tl' to 'en' or 'en' to 'tl'
+
+    Args:
+        request (obj) : HttpRequest object
+
+    Returns:
+        The request object with its LANGUAGE_SESSION_KEY switched to whichever language was not used
+    """
+    if request.session[LANGUAGE_SESSION_KEY] == "tl":
+        request.session[LANGUAGE_SESSION_KEY] = "en"
+        translation.activate("en")
+    elif request.session[LANGUAGE_SESSION_KEY] == "en":
+        request.session[LANGUAGE_SESSION_KEY] = "tl"
+        translation.activate("tl")
+
+    return request
+        
+```
 
 
 
