@@ -306,7 +306,7 @@ msgstr ""
 msgid "Tagalog"
 msgstr ""
 ```
-The first half is just a template of administrative details, usually intended for the translators to read. The core of the file is in the second half:
+The first half is just a template of administrative details, usually intended for the translators to fill out. The core of the file is in the second half:
 ``` 
 #: translate/settings.py:120
 msgid "English"
@@ -328,6 +328,7 @@ Now, lets try marking strings in `translation_example.html` for translation, lik
 <html>
 
 <head>
+  <!-- Current language: {{ LANGUAGE_CODE }} -->
   <title>Example</title>
 </head>
 
@@ -338,6 +339,8 @@ Now, lets try marking strings in `translation_example.html` for translation, lik
 </html>
 ```
 
+Make sure to add `{％ load i18n ％}` at the top of the page as well as the `<!-- Current language: {{ LANGUAGE_CODE }} -->` comment. 
+
 Then, enter
 ```bash
 $ python manage.py makemessages -l tl
@@ -346,13 +349,43 @@ again.
 
 If you check your `django.po` file now, you will see an extra block of code:
 ```
-#: example/templates/translation_example.html:12
+#: example/templates/translation_example.html:13
 msgid "Hello world!"
 msgstr ""
 ```
 Django automatically identified the string to be translated, and updated `django.po` to reflect that!
 
+We can then fill out the appropriate translation for `Hello World!` in Filipino, which is `Kumusta mundo!`.
+```
+#: example/templates/translation_example.html:13
+msgid "Hello world!"
+msgstr "Kumusta mundo!"
+```
 
+Next, to be able to see the translation, we will add a button we can click to toggle the translation. Update `translate_example.html` such that it looks like this:
+```html
+{% load i18n %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Example</title>
+</head>
+
+<body>
+<!-- Current language: {{ LANGUAGE_CODE }} -->
+  {% trans "Hello world!" %}
+
+  <form action="{% url 'example:index' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Translate" />
+  </form>
+</body>
+
+</html>
+```
 
 
 
