@@ -96,7 +96,7 @@ Plain and simple. As a sneak peek ahead, we will allow users to convert `Hello w
 
 In order to have the template we just created show up when we enter <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> into our browser, we must edit three files, `settings.py`, `urls.py` and `views.py`, as well as create another `urls.py` in our `example` app folder. 
 
-First, we will edit `settings.py` to allow Django to "recognize" the template we just made. In `translate/settings.py`, we will add `os.path.join(BASE_DIR, 'example/atemplates')` to `TEMPLATES` so the end result looks like this:
+First, we will edit `settings.py` to allow Django to "recognize" the template we just made. In `translate/settings.py`, we will add `os.path.join(BASE_DIR, 'example/templates')` to `TEMPLATES` so the end result looks like this:
 ```python
 TEMPLATES = [
     {
@@ -261,7 +261,7 @@ LOCALE_PATHS = (
 )
 ```
 
-Now we have finished setting up Django to handle translations! To create the `.po` file, first install `gettext`. In OS X (assuming you have (homebrew installed)[https://brew.sh/]):
+Now we have finished setting up Django to handle translations! To create the `.po` file, first install `gettext`. In OS X (assuming you have [homebrew installed](https://brew.sh/):
 ```bash
 $ brew install gettext
 $ brew link gettext --force
