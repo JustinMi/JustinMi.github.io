@@ -431,3 +431,12 @@ def switch_language(request):
 ```
 
 To alter the language currently displayed, we will change `request.session` by setting the `LANGUAGE_SESSION_KEY` to either `"tl"` or `"en"`. The `switch_language` helper function is just used to switch between `"en"` and `"tl"`. In the `index`, we added some logic control--if the request we recieved was a POST request (i.e. the user pressed the 'Translate' button) we will alter the request `LANGUAGE_SESSION_KEY` by calling `switch_language`. Otherwise, we will use the default `"en"` language. Finaly, after editing the `request` object, we will still return `render(request, "translation_example.html")` as before.
+
+We are almost there! Finally, run
+```
+django-admin compilemessages
+```
+
+This will turn the translation file into a more Django-friendly byte file. When you run the server using `python manage.py runserver`, you should see this page: 
+{% include image.html url="/assets/images/localization_blog_post/samplepage2.png" description="The page you should see at this point" style="width=80%" %}
+
