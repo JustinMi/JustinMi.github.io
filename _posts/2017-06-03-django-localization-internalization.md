@@ -440,3 +440,5 @@ django-admin compilemessages
 This will turn the translation file into a more Django-friendly byte file. When you run the server using `python manage.py runserver`, you should see this page: 
 {% include image.html url="/assets/images/localization_blog_post/samplepage2.png" description="The page you should see at this point" style="width=80%" %}
 
+If you hit the "Translate" button, "Hello world!" should be translated!
+{% include image.html url="/assets/images/localization_blog_post/samplepage3.png" description="The page you should see at this point" style="width=80%" %}
