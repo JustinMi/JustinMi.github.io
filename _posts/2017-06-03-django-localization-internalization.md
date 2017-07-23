@@ -442,3 +442,11 @@ This will turn the translation file into a more Django-friendly byte file. When 
 
 If you hit the "Translate" button, "Hello world!" should be translated!
 {% include image.html url="/assets/images/localization_blog_post/samplepage3.png" description="The page you should see at this point" style="width=80%" %}
+
+-------------
+
+# Step 7: Wrap Up and Summary
+
+The button we hit sends a POST request that is redirected using Django's URL dispatchers to the `views.index` function. The function then detects that the `request` sent was a post, so it changes the `request` language parameters. With the language parameter changed Django then fills in all the `{％ trans ％}` tags with the respective translations from the `.po` file. That way, you can toggle the language on your webpage!
+
+With this foundation, you can expand the localization capabilities of your website by adding multiple languages that users can select from a dropdown menu. Since Django is designed to be modular, having multiple `.po` files is no problem!
