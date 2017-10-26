@@ -58,7 +58,7 @@
 \newenvironment{head}
     {
     \begin{center}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l c r}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l c c r}
     }
     {
     \hline
@@ -74,10 +74,15 @@
 
 
     %% HEADER %%
+    \begin{center}
+        \huge{\textbf{Justin Mi}}
+    \end{center}
     \begin{head}
-                           & \huge{\textbf{\sc{\textbf{Justin Mi}}}} \\
-    justin.mi@berkeley.edu  & www.justinmi.me & Mobile: (408) 896 0496 \\
+    justin.mi@berkeley.edu  & github.com/JustinMi & www.justinmi.me & Mobile: (408) 896 0496 \\
     \end{head}
+
+
+
 
 
 
@@ -87,12 +92,17 @@
     \begin{topic}{\textbf{Education}}
         \begin{event}
             \textbf{University of California, Berkeley} & Berkeley, CA \\
-            \emph{BS, Electrical Engineering and Computer Science (EECS)} & \emph{August 2016 - May 2020}        
+            \emph{BS, Electrical Engineering and Computer Science (EECS)} & \emph{August 2016 - Present}        
         \end{event}
             \begin{detail}
-                GPA: 3.5; Major GPA: 3.9; Coursework: Data Structures, Algorithms, Discrete Math, Probability Theory, Linear Algebra, Computer Architecture, Information Systems \& Devices Design, Multivariate Calculus            
+                Major GPA: 3.9; Coursework: Data Structures, Algorithms, Discrete Math, Probability Theory, Linear Algebra, Computer Architecture, Information Systems \& Devices Design, Multivariate Calculus            
             \end{detail}
     \end{topic} \vspace*{0.1in}
+
+
+
+
+
 
 
 
@@ -103,24 +113,13 @@
     \begin{topic}{\textbf{Experience}}
         % AutoLab
         \begin{event}
-            \textbf{Berkeley Laboratory for Automation} & Berkeley, CA \\
-            \emph{Unix Systems Administrator \& Web Developer} & \emph{February 2017 - Present}
+            \textbf{CITRIS Institute} & Berkeley, CA \\
+            \emph{Software Engineering Intern} & \emph{May 2017 - Present}
         \end{event}
             \begin{itemize}
-                \item Co-author of a paper published in IEEE GHTC 2017 with Prof. Ken Goldberg
-                \item Developed the CAFE open-source platform (details below), launched 2 websites using CAFE
-                \item Maintained 28 lab sites using Linux/Apache/MySQL/PHP tech stack; launched 2 sites using WordPress
-            \end{itemize}
-
-        % BIDS
-        \begin{event}
-            \textbf{Berkeley Institute for Data Science} & Berkeley, CA \\
-            \emph{Project Lead} & \emph{September 2016 - Present} \\
-        \end{event}
-            \begin{itemize}
-                \item Used machine learning (clustering, random forest, regression, PCA) to identify traits of invasive species
-                \item Built webapp using Django to allow users to upload datasets and use ML model: \emph{edam.berkeley.edu}
-                \item Classified 3000 species, achieved a classification accuracy of 87\% for at-risk plants
+                \item Created the CAFE open-source platform for constructing engaging and responsive online surveys to increase policy-making transparency and efficiency (more details in Projects), launched 2 websites using CAFE
+                \item Co-author of 2 papers published in IEEE GHTC 2017 and IEEE TENCON 2017
+                \item Contributed to the development of a collaborative filtering algorithm to determine the novelty of opinions
             \end{itemize}
 
         % Blueprint
@@ -129,10 +128,28 @@
             \emph{Project Developer} & \emph{November 2017 - Present}
         \end{event}
             \begin{itemize}
-                \item Created a collaborative questionnaire and form processing app using Rails, React, and AWS for client Rocky Mountain Institute to streamline client acquisition and vetting process
+                \item Created a collaborative questionnaire and form-processing app using Rails, React, and AWS for client Rocky Mountain Institute to streamline client acquisition and vetting process
             \end{itemize}
+
+        % BIDS
+        \begin{event}
+            \textbf{Berkeley Institute for Data Science} & Berkeley, CA \\
+            \emph{Project Lead} & \emph{September 2016 - Present} \\
+        \end{event}
+            \begin{itemize}
+                \item Developed a semi-supervised machine learning model to identify traits of invasive species
+                \item Built webapp using Django to allow users to use ML model and visualize data: \emph{edam.berkeley.edu}
+                \item Classified 3000 species, achieved a classification accuracy of 87\% for at-risk plants
+            \end{itemize}
+
+        
         
     \end{topic} \vspace*{0.1in}
+
+
+
+
+
 
 
 
@@ -147,9 +164,9 @@
         \end{event}
             \begin{itemize}
                 \item Built an open-source survey platform in Django that provides policy-makers insights into constituents' views by allowing survey-takers to submit their own opinions and policy suggestions, and rate others' opinions
-                \item Created administrative dashboard with data visualization and analytics tools for policymakers
+                \item Developed administrative dashboard with data visualization and analytics tools for policymakers
                 \item Created dynamic feedback engine that provides participants' positions on social issues relative to community.
-                \item Uses Service Workers and local storage to allow app to operate with limited to no internet
+                \item Implemented Service Workers and local storage features to allow app to operate with limited to no internet
             \end{itemize}
 
         % and-sold
@@ -158,9 +175,8 @@
         \end{event}
             \begin{itemize}
                 \item Built a lightweight auction room generator for P2P transactions on Craigslist and Facebook marketplaces
-                \item Allows users to instantiate an auction room for a item, which carries a unique link on the site. 
-                \item Interested buyers click on the link to make bids on the item. 
-                \item Allows sellers to organize buyers and gain naturally adjust price if the item is popular or not popular.
+                \item Allowed users to instantiate an auction room for a item, which carries a unique link that they share on Craigslist/Facebook, and interested buyers click on the link to make bids on the item 
+                \item Made a dashboard to organize buyers and gain naturally adjust price if the item is popular
             \end{itemize}
 
         % Pablo
@@ -168,30 +184,19 @@
         \textbf{Pablo}
         \end{event}
             \begin{itemize}
-                \item A Facebook Messenger bot that allows users to have anonymous conversations with others through it
+                \item Created a Facebook Messenger bot that allows users to have anonymous conversations through it
                 \item Deployed on DigitalOcean virtual server, used Ruby and Rails as language and framework
                 \item Used Facebook API to integrate Ruby backend with webhook 
                 \item Wrote algorithm that made calls to access users based on unique IDs and pair them pseudorandomly
-                \item Allows administrators to mass-send casual updates to all bot subscribers
-                \item Syncs with a user's weekly schedule to automatically send individualized reminders about events
+                \item Created dashboard to allow administrators to mass-send casual updates to all bot subscribers
             \end{itemize}
-
-        % % Malasakit Paper
-        % \begin{event}
-        %     \textbf{Malasakit 1.0: A Participatory Online Platform for Crowdsourcing Disaster Risk Reduction Strategies in the Philippines}
-        % \end{event}
-        %     \begin{itemize}
-        %         \item Arduino system that uses RFID and Bluetooth to track whether a user has forgotten their belongings
-        %         \item Created a "Find My iPhone"-like app as a hub for the user to retrieve forgotten belongings
-        %         \item Won 1st place in Robotics@Berkeley's 2016 invention competition. Video: bit.ly/2fYhVmH
-        %     \end{itemize}
 
         % Dorm Ex Machina
         \begin{event}
             \textbf{Dorm Ex Machina} & \emph{Github: git.io/vyfyf}
         \end{event}
             \begin{itemize}
-                \item Arduino system that uses RFID and Bluetooth to track whether a user has forgotten their belongings
+                \item Created an Arduino system that uses RFID and Bluetooth to check if a user has forgotten their belongings
                 \item Created a "Find My iPhone"-like app as a hub for the user to retrieve forgotten belongings
                 \item Won 1st place in Robotics@Berkeley's 2016 invention competition. Video: bit.ly/2fYhVmH
             \end{itemize}
@@ -202,11 +207,16 @@
 
 
 
+
+
+
+
+
     %% SKILLS AND QUALIFICATIONS %%
     \begin{topic}{\textbf{Skills and Qualifications}}
         \begin{detail}
-            \textbf{Experienced} -- Python, Java, C, Ruby, JavaScript, Node.js, jQuery, HTML, CSS\\
-            \textbf{Proficient} -- Ethereum, Solidity
+            \textbf{Languages} -- Python, Java, C, Ruby, JavaScript, SQL, Scheme \\
+            \textbf{Platforms/Libraries} -- jQuery, Node.js, React.js, Django, Express, Rails
         \end{detail}
     \end{topic}
 
