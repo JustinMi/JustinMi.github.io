@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 DEC 2017 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 DEC 2017 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -135,14 +135,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 81.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 121.
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--120
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 127.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 121.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--158
+
+ []
+
+[1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./Justin-Mi-Resume.aux) ) 
@@ -160,7 +170,7 @@ c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti10.pfb>
-Output written on Justin-Mi-Resume.pdf (1 page, 82047 bytes).
+Output written on Justin-Mi-Resume.pdf (1 page, 82835 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
