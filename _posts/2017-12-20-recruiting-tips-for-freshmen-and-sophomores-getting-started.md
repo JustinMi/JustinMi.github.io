@@ -22,7 +22,7 @@ Hopefully I wasn't too much of a downer with those thoughts. If you are still re
 
 # What is Your Purpose?
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/colbert_yay.gif" description="" style="width=70%" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/purpose.gif" description="" style="width=70%" %}
 
 Before even starting to recruit, you should have a purpose and a plan. Not only will your recruiting process be clearer as you will have an idea of what you want and what your goals are, you will often get asked by a recruiter or hiring manager, "What are you hoping to get out of this internship?" Having a good answer to that question is important. That being said, before even continuing to read this blog post, you should start thinking about your answers to the following questions:  
   
