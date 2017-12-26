@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1513807865 "Justin-Mi-Resume.tex" "Justin-Mi-Resume.pdf" "Justin-Mi-Resume" 1513807866
+["pdflatex"] 1514112004 "Justin-Mi-Resume.tex" "Justin-Mi-Resume.pdf" "Justin-Mi-Resume" 1514112005
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -36,8 +36,8 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1472152134 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1463979169 3873397 413fbfbbedb8e719ddc392043a7add02 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "Justin-Mi-Resume.aux" 1513807866 8 a94a2480d3289e625eea47cd1b285758 ""
-  "Justin-Mi-Resume.tex" 1513807865 7701 9d4b4bb7c6162f5a3dc277236f612e58 ""
+  "Justin-Mi-Resume.aux" 1514112004 8 a94a2480d3289e625eea47cd1b285758 ""
+  "Justin-Mi-Resume.tex" 1514111996 7702 7e40c497cfd98427f11294d637564a8c ""
   (generated)
   "Justin-Mi-Resume.aux"
   "Justin-Mi-Resume.pdf"
