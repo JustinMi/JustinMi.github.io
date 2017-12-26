@@ -10,6 +10,8 @@ Recruiting for internships (and clubs, and research positions, and...) as a fres
 
 # Part 1: Getting Started
 
+{% include image.html url="/assets/images/localization_blog_post/shrug.gif" description="" style="width=80%" %}
+
 I want to be realistic and honest with you, so first let's get a hard truth out of the way: most companies, unfortunately, are looking for juniors and seniors, because they are hoping that after the internship the junior and senior interns will sign contracts for full-time positions after graduation.
 
 However, please do not be bummed out! It is still absolutely possible to get an internship as a freshman or sophomore! It might take a bit more hustle and hard work, but it's entirely possible. In addition, there are a LOT of freshmen-friendly companies out there, and there are even internship programs that *specifically* choose lowerclassmen! I will get into those programs in more detail in a later blog post. 
@@ -27,6 +29,7 @@ Before even starting to recruit, you should have a purpose and a plan. Not only 
   3. What sorts of CS jobs are you interested in doing? Alternatively, what sorts of CS jobs are you interested in learning more about?
   4. There are CS jobs in every industry--music, finance, healthcare, and beyond. What industry interests you the most? What industry do you want to learn more about?
   5. If you don't end up finding an internship for next summer, what are your backup plans?
+
 
 
 
