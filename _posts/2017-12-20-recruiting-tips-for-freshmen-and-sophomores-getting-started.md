@@ -10,17 +10,19 @@ Recruiting for internships (and clubs, and research positions, and...) as a fres
 
 # Part 1: Getting Started
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/colbert_yay.gif" description="" style="width=80%" %}
-
 I want to be realistic and honest with you, so first let's get a hard truth out of the way: most companies, unfortunately, are looking for juniors and seniors, because they are hoping that after the internship the junior and senior interns will sign contracts for full-time positions after graduation.
 
 However, please do not be bummed out! It is still absolutely possible to get an internship as a freshman or sophomore! It might take a bit more hustle and hard work, but it's entirely possible. In addition, there are a LOT of freshmen-friendly companies out there, and there are even internship programs that *specifically* choose lowerclassmen! I will get into those programs in more detail in a later blog post. 
+
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/colbert_yay.gif" description="" style="width=40%" %}
 
 Also, please keep in mind that across the country, the broad majority of CS students do not look for internships their freshman or sophomore year, so if you recruit as a freshman or sophomore you are already ahead of the curve! You will be much more experienced by the time you are a junior or senior. 
 
 Hopefully I wasn't too much of a downer with those thoughts. If you are still reading, let's get started!
 
 # What is Your Purpose?
+
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/colbert_yay.gif" description="" style="width=70%" %}
 
 Before even starting to recruit, you should have a purpose and a plan. Not only will your recruiting process be clearer as you will have an idea of what you want and what your goals are, you will often get asked by a recruiter or hiring manager, "What are you hoping to get out of this internship?" Having a good answer to that question is important. That being said, before even continuing to read this blog post, you should start thinking about your answers to the following questions:  
   
@@ -29,8 +31,6 @@ Before even starting to recruit, you should have a purpose and a plan. Not only 
   3. What sorts of CS jobs are you interested in doing? Alternatively, what sorts of CS jobs are you interested in learning more about?
   4. There are CS jobs in every industry--music, finance, healthcare, and beyond. What industry interests you the most? What industry do you want to learn more about?
   5. If you don't end up finding an internship for next summer, what are your backup plans?
-
-
 
 
 # Your Resume
