@@ -10,7 +10,7 @@ Recruiting for internships (and clubs, and research positions, and...) as a fres
 
 # Part 1: Getting Started
 
-{% include image.html url="/assets/images/localization_blog_post/shrug.gif" description="" style="width=80%" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/colbert_yay.gif" description="" style="width=80%" %}
 
 I want to be realistic and honest with you, so first let's get a hard truth out of the way: most companies, unfortunately, are looking for juniors and seniors, because they are hoping that after the internship the junior and senior interns will sign contracts for full-time positions after graduation.
 
