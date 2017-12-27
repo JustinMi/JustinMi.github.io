@@ -35,7 +35,7 @@ Before even starting to recruit, you should have a purpose and a plan. Not only 
 
 # Your Resume
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/resume.gif" description="" style="width:130%; height:auto;" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/resume.gif" description="" style="width:200%; height:auto;" %}
 
 ### Style Templates and Resources
 
@@ -55,9 +55,9 @@ Your resume should generally have the following categories:
 
 At the top, include your name in large font. Next, list your LinkedIn if you have one, your Github if you have one, your school email, and your phone number. Some people include their address; I personally don't include it, because I've never encountered a need for it. 
 
-Next, include your college and major. If you are intended-CS, just put CS, as people might not know what "intended-CS" means. Most people include their expected graduation year, but I would actually suggest that as a freshman or sophomore that you don't list your graduation year, as it might actually dissuade employers from giving you a chance. Also include any relevant classes you took, using commonly-understood names. Instead of listing "CS 61A" list it as its full name "Structure and Interpretation of Computer Programs" or even the more commonly-understood "Intro Into CS".
+Next, include your college and major. If you are intended-CS, it is fine to just list your major as "CS", as that is the major you are currently working towards. Most people include their expected graduation year, but I would actually suggest that as a freshman or sophomore that you don't share your graduation year if possible, as it might actually dissuade employers from giving you a chance. Also include any relevant classes you took, using commonly-understood names. Instead of listing "CS 61A" list it as its full name "Structure and Interpretation of Computer Programs" or even the more commonly-understood "Intro Into CS".
 
-For experience, you can list any extracurricular activities that you have done. Include some details under each activity describing what you did and what it was about. One trick is to make sure you start all your description sentences with an action verb, as it comes across as more impactful--for example, instead of saying "For the robotics team, I built a pneumatic subsystem" switch it around and say "Built a pneumatic subsystem for the robotics team". Prioritize activities you did in college, but if you have extra space feel free to include high school stuff too. 
+For experience, you can list any extracurricular activities that you have done. Include some details under each activity describing what you did and what it was about. One small tip someone gave me was to make sure you start all your description sentences with an action verb, as it comes across as more impactful--for example, instead of saying "For the robotics team, I built a pneumatic subsystem" switch it around and say "Built a pneumatic subsystem for the robotics team". There is also no need to include words like "I", "me", etc. because all the experiences listed on yur resume are assumed to be yours; if they aren't yours, then they shouldn't be on your resume anyways. Prioritize activities you did in college, but if you have extra space feel free to include high school stuff too. 
 
 CS employers typically like seeing projects on a resume, because that shows that you know how to code beyond simply learning theory in a classroom. Projects you should list here can include hackathon projects, personal projects, and projects done for a club or outside organization. You can also list substantial projects that you have done in school, like for 61A and 61B. Give a description of the project, mention the tech stack that you used, and if possible include a link to it. 
 
