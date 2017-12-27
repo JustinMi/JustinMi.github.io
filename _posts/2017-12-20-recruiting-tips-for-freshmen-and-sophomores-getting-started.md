@@ -35,7 +35,7 @@ Before even starting to recruit, you should have a purpose and a plan. Not only 
 
 # Your Resume
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/resume.gif" description="" style="width:150px; height:auto;" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/resume.gif" description="" style="width:400px; height:auto;" %}
 
 ### Style Templates and Resources
 
