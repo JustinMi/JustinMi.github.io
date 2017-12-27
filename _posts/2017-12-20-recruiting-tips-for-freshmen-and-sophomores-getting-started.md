@@ -35,7 +35,7 @@ Before even starting to recruit, you should have a purpose and a plan. Not only 
 
 # Your Resume
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/resume.gif" description="" style="width=250px" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/resume.gif" description="" style="width=750px" %}
 
 One thing that every company asks for when considering a job candidate is a resume. Whether you are looking to create an entirely new resume or simply edit an existing one, I highly suggest starting with an online template--creating your own from scratch is pretty tedious. There are many great LaTeX resume templates out there, like [these](https://www.sharelatex.com/templates/cv-or-resume) or [this](https://github.com/opensorceror/Data-Engineer-Resume-LaTeX). If you don't know LaTeX, you can also use Word or other text editor (though you will likely need to learn LaTeX eventually for other Berkeley CS classes, so now is as good a time as any to start learning!). [Here](https://www.template.net/business/resume/fresher-engineer-resume-template/) are some great Word templates. 
 
