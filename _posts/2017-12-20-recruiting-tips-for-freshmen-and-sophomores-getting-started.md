@@ -14,7 +14,7 @@ I want to be realistic and honest with you, so first let's get a hard truth out 
 
 However, please do not be bummed out! It is still absolutely possible to get an internship as a freshman or sophomore! It might take a bit more hustle and hard work, but it's entirely possible. In addition, there are a LOT of freshmen-friendly companies out there, and there are even internship programs that *specifically* choose lowerclassmen! I will get into those programs in more detail in a later blog post. 
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/colbert_yay.gif" description="" style="width=5%" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/colbert_yay.gif" description="" style="width:20%; height:auto;" %}
 
 Also, please keep in mind that across the country, the broad majority of CS students do not look for internships their freshman or sophomore year, so if you recruit as a freshman or sophomore you are already ahead of the curve! You will be much more experienced by the time you are a junior or senior. 
 
@@ -22,7 +22,7 @@ Hopefully I wasn't too much of a downer with those thoughts. If you are still re
 
 # What is Your Purpose?
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/purpose.gif" description="" style="width=40%" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/purpose.gif" description="" style="width:40%; height:auto;" %}
 
 Before even starting to recruit, you should have a purpose and a plan. Not only will your recruiting process be clearer as you will have an idea of what you want and what your goals are, you will often get asked by a recruiter or hiring manager, "What are you hoping to get out of this internship?" Having a good answer to that question is important. That being said, before even continuing to read this blog post, you should start thinking about your answers to the following questions:  
   
@@ -35,7 +35,7 @@ Before even starting to recruit, you should have a purpose and a plan. Not only 
 
 # Your Resume
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/resume.gif" description="" style="width:750px; height:auto;" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/resume.gif" description="" style="width:50%; height:auto;" %}
 
 One thing that every company asks for when considering a job candidate is a resume. Whether you are looking to create an entirely new resume or simply edit an existing one, I highly suggest starting with an online template--creating your own from scratch is pretty tedious. There are many great LaTeX resume templates out there, like [these](https://www.sharelatex.com/templates/cv-or-resume) or [this](https://github.com/opensorceror/Data-Engineer-Resume-LaTeX). If you don't know LaTeX, you can also use Word or other text editor (though you will likely need to learn LaTeX eventually for other Berkeley CS classes, so now is as good a time as any to start learning!). [Here](https://www.template.net/business/resume/fresher-engineer-resume-template/) are some great Word templates. 
 
@@ -63,7 +63,7 @@ The Skills section should take up the least space on your resume. Its role is to
 
 # Resources
 
-{% include image.html url="/assets/images/recruiting_pt_1_blog_post/help.gif" description="" style="width=70%" %}
+{% include image.html url="/assets/images/recruiting_pt_1_blog_post/help.gif" description="" style="width:70%; height:auto;" %}
 
 - Jobs & Internships Berkeley page
 - Hackathon Hackers community and related pages (HH Jobs, HH Interviews)
