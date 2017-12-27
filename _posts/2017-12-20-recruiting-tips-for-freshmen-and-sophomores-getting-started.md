@@ -55,7 +55,7 @@ Your resume should generally have the following categories:
 
 At the top, include your name in large font. Next, list your LinkedIn if you have one, your Github if you have one, your school email, and your phone number. Some people include their address; I personally don't include it, because I've never encountered a need for it. 
 
-Next, include your college and major. If you are intended-CS, it is fine to just list your major as "CS", as that is the major you are currently working towards. Most people include their expected graduation year, but I would actually suggest that as a freshman or sophomore that you don't share your graduation year if possible, as it might actually dissuade employers from giving you a chance. Also include any relevant classes you took, using commonly-understood names. Instead of listing "CS 61A" list it as its full name "Structure and Interpretation of Computer Programs" or even the more commonly-understood "Intro Into CS".
+Next, include your college and major. Also include any relevant classes you took, using commonly-understood names. Instead of listing "CS 61A" list it as its full name "Structure and Interpretation of Computer Programs" or even the more commonly-understood "Intro Into CS".
 
 For experience, you can list any extracurricular activities that you have done. Include some details under each activity describing what you did and what it was about. One small tip someone gave me was to make sure you start all your description sentences with an action verb, as it comes across as more impactful--for example, instead of saying "For the robotics team, I built a pneumatic subsystem" switch it around and say "Built a pneumatic subsystem for the robotics team". There is also no need to include words like "I", "me", etc. because all the experiences listed on your resume are assumed to be yours; if they aren't yours, then they shouldn't be on your resume anyways. Prioritize activities you did in college, but if you have extra space feel free to include high school stuff too. 
 
@@ -63,15 +63,14 @@ CS employers typically like seeing projects on a resume, because that shows that
 
 The Skills section should take up the least space on your resume. Its role is to simply provide the reader with a quick snapshot with the programming languages, frameworks, and tools that you are familiar with. Some people like to add extra flair/info to their Skills section, like a note on how well they know each programming language, but I personally prefer to keep this section short and concise: "Here are the skills I know. Here are the frameworks I know."
 
-# Conclusion and More Resources
+# More Resources
 
 {% include image.html url="/assets/images/recruiting_pt_1_blog_post/help.gif" description="" style="width:70%; height:auto;" %}
 
+And don't just take my advice; there are lots of resources out there that I personally use when figuring out what the hell to do with recruitment. 
 
+- [Berkeley's CS Jobs & Internships Facebook page](https://www.facebook.com/groups/267584643336416/)
+- [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) Facebook community and related pages ([HH Interview Experiences](https://www.facebook.com/groups/interviewexper/), [HH Coding Interview Prep](https://www.facebook.com/groups/hhcodinginterviewprep/))
+- [Reddit's /r/CSCareerQuestions](https://www.reddit.com/r/cscareerquestions/)
+- [Reddit's /r/learnprogramming](https://www.reddit.com/r/learnprogramming/)
 
-- Jobs & Internships Berkeley page
-- Hackathon Hackers community and related pages (HH Jobs, HH Interviews)
-- /r/CSCareerQuestions
-- /r/learnprogramming
-
-# Recruiting in the Spring
