@@ -67,10 +67,10 @@ The Skills section should take up the least space on your resume. Its role is to
 
 {% include image.html url="/assets/images/recruiting_pt_1_blog_post/help.gif" description="" style="width:70%; height:auto;" %}
 
-And don't just take my advice; there are lots of resources out there that I personally use when figuring out what the hell to do with recruitment. 
+And don't just take my advice; there are lots of resources out there that I personally found useful when figuring out what the hell to do with recruitment. 
 
 - [Berkeley's CS Jobs & Internships Facebook page](https://www.facebook.com/groups/267584643336416/)
 - [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) Facebook community and related pages ([HH Interview Experiences](https://www.facebook.com/groups/interviewexper/), [HH Coding Interview Prep](https://www.facebook.com/groups/hhcodinginterviewprep/))
-- [Reddit's /r/CSCareerQuestions](https://www.reddit.com/r/cscareerquestions/)
+- [Reddit's /r/CSCareerQuestions](https://www.reddit.com/r/cscareerquestions/) 
 - [Reddit's /r/learnprogramming](https://www.reddit.com/r/learnprogramming/)
 
