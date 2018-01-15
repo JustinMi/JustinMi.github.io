@@ -6,13 +6,13 @@ date: 2017-12-20
 
 # Intro
 
-Recruiting for internships (and clubs, and research positions, and...) as a freshman or sophomore can be daunting at times. Where do you start? How do you apply? How do you maximize your chances of getting responses? How do you "do" a technical interview? This blog post will be the first in a series aimed at freshmen and sophomores that will hopefully answer those questions!
+Recruiting for internships (and clubs, and research positions, and...) as a freshman or sophomore can be daunting at times, and there are not a lot of resources out there specifically tailored to underclassmen recruiting. Where do you start? How do you apply? How do you maximize your chances of getting responses? How do you "do" a technical interview? This blog post will be the first in a series aimed at freshmen and sophomores that will hopefully answer those questions!
 
 # Part 1: Getting Started
 
 I want to be realistic and honest with you, so first let's get a hard truth out of the way: most companies, unfortunately, are looking for juniors and seniors, because they are hoping that after the internship the junior and senior interns will sign contracts for full-time positions after graduation.
 
-However, please do not be bummed out! It is still absolutely possible to get an internship as a freshman or sophomore! It might take a bit more hustle and hard work, but it's entirely possible. In addition, there are a LOT of freshmen-friendly companies out there, and there are even internship programs that *specifically* choose lowerclassmen! I will get into those programs in more detail in a later blog post. 
+However, please do not be bummed out! It does NOT mean you are not qualified, or that companies don't want underclassmen! It is still absolutely possible to get an internship as a freshman or sophomore! It might take a bit more hustle and hard work, but it's entirely possible. In addition, there are a LOT of freshmen-friendly companies out there, and there are even internship programs that *specifically* choose lowerclassmen! I will get into those programs in more detail in a later blog post. 
 
 {% include image.html url="/assets/images/recruiting_pt_1_blog_post/colbert_yay.gif" description="" style="width:70%; height:auto;" %}
 
@@ -26,7 +26,7 @@ Hopefully I wasn't too much of a downer with those thoughts. If you are still re
 
 Before even starting to recruit, you should have a purpose and a plan. Not only will your recruiting process be clearer as you will have an idea of what you want and what your goals are, you will often get asked by a recruiter or hiring manager, "What are you hoping to get out of this internship?" Having a good answer to that question is important. That being said, before even continuing to read this blog post, you should start thinking about your answers to the following questions:  
   
-  1. There are so many things you could be doing next summer--why do you want an internship?
+  1. There are so many valuable, productive things you could be doing next summer--out of all of them, why do you want do an internship?
   2. As I mentioned before, most students don't start finding internships until their junior year. Why do you want to start so early?
   3. What sorts of CS jobs are you interested in doing? Alternatively, what sorts of CS jobs are you interested in learning more about?
   4. There are CS jobs in every industry--music, finance, healthcare, and beyond. What industry interests you the most? What industry do you want to learn more about?
@@ -53,15 +53,15 @@ Your resume should generally have the following categories:
   4. Projects
   5. Skills
 
-At the top, include your name in large font. Next, list your LinkedIn if you have one, your Github if you have one, your school email, and your phone number. Some people include their address; I personally don't include it, because I've never encountered a need for it. 
+At the top, include your name in large font. Next, list your LinkedIn if you have one, your Github if you have one, your school email, and your phone number. Some people include their addresses; I personally don't include it because I've never encountered a need for it. However, some people do include it as it shows to local companies that they don't need to relocate for work, which may be appealing. 
 
-Next, include your college and major. Also include any relevant classes you took, using commonly-understood names. Instead of listing "CS 61A" list it as its full name "Structure and Interpretation of Computer Programs" or even the more commonly-understood "Intro Into CS".
+Next, include your college and major. Also include any relevant classes you took, using commonly-understood names. Instead of listing "CS 61A" list it as its full name "Structure and Interpretation of Computer Programs".
 
-For experience, you can list any extracurricular activities that you have done. Include some details under each activity describing what you did and what it was about. One small tip someone gave me was to make sure you start all your description sentences with an action verb, as it comes across as more impactful--for example, instead of saying "For the robotics team, I built a pneumatic subsystem" switch it around and say "Built a pneumatic subsystem for the robotics team". There is also no need to include words like "I", "me", etc. because all the experiences listed on your resume are assumed to be yours; if they aren't yours, then they shouldn't be on your resume anyways. Prioritize activities you did in college, but if you have extra space feel free to include high school stuff too. 
+For experience, you can list any extracurricular activities that you have done. Include some details under each activity describing what you did and what it was about. Ideally, you should emphasize achievements that you had during that activity. One small tip someone gave me was to make sure you start all your description sentences with an action verb, as it comes across as more impactful--for example, instead of saying "For the robotics team, I built a pneumatic subsystem" switch it around and say "Built a pneumatic subsystem for the robotics team". There is also no need to include words like "I", "me", etc. because all the experiences listed on your resume are assumed to be yours; if they aren't yours, then they shouldn't be on your resume anyways. Prioritize activities you did in college, but if you have extra space feel free to include high school stuff too. 
 
 CS employers typically like seeing projects on a resume, because that shows that you know how to code beyond simply learning theory in a classroom. Projects you should list here can include hackathon projects, personal projects, and projects done for a club or outside organization. You can also list substantial projects that you have done in school, like for 61A and 61B. Give a description of the project, mention the tech stack that you used, and if possible include a link to it. 
 
-The Skills section should take up the least space on your resume. Its role is to simply provide the reader with a quick snapshot with the programming languages, frameworks, and tools that you are familiar with. Some people like to add extra flair/info to their Skills section, like a note on how well they know each programming language, but I personally prefer to keep this section short and concise: "Here are the skills I know. Here are the frameworks I know."
+The Skills section should take up the least space on your resume. Its role is to simply provide the reader with a quick snapshot with the programming languages, frameworks, and tools that you are familiar with. Some people like to add extra flair/info to their Skills section, like a note on how well they know each programming language, but I personally prefer to keep this section short and concise: "Here are the skills I know; Here are the frameworks I know."
 
 # More Resources
 
@@ -69,8 +69,8 @@ The Skills section should take up the least space on your resume. Its role is to
 
 And don't just take my advice; there are lots of resources out there that I personally found useful when figuring out what the hell to do with recruitment. 
 
-- [Berkeley's CS Jobs & Internships Facebook page](https://www.facebook.com/groups/267584643336416/)
-- [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) Facebook community and related pages ([HH Interview Experiences](https://www.facebook.com/groups/interviewexper/), [HH Coding Interview Prep](https://www.facebook.com/groups/hhcodinginterviewprep/))
-- [Reddit's /r/CSCareerQuestions](https://www.reddit.com/r/cscareerquestions/) 
-- [Reddit's /r/learnprogramming](https://www.reddit.com/r/learnprogramming/)
+- [Berkeley's CS Jobs & Internships Facebook page](https://www.facebook.com/groups/267584643336416/) is great for finding job opportunities
+- The [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) Facebook community and related pages ([HH Interview Experiences](https://www.facebook.com/groups/interviewexper/), [HH Coding Interview Prep](https://www.facebook.com/groups/hhcodinginterviewprep/)) can also be helpful, but it has a lot of variance in terms of content.
+- [Reddit's /r/CSCareerQuestions](https://www.reddit.com/r/cscareerquestions/) is a very useful career-focused community to learn from. However, in my experience the community there can be pretty toxic (think CollegeConfidential but for recruiting) at times so I recommend it in small doses.  
+- [Reddit's /r/learnprogramming](https://www.reddit.com/r/learnprogramming/) is a great community that can help you with anything in your CS career, not limited to recruiting
 
