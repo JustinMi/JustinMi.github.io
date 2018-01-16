@@ -70,7 +70,7 @@ The Skills section should take up the least space on your resume. Its role is to
 And don't just take my advice; there are lots of resources out there that I personally found useful when figuring out what the hell to do with recruitment. 
 
 - [Berkeley's CS Jobs & Internships Facebook page](https://www.facebook.com/groups/267584643336416/) is great for finding job opportunities
-- The [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) Facebook community and related pages ([HH Interview Experiences](https://www.facebook.com/groups/interviewexper/), [HH Coding Interview Prep](https://www.facebook.com/groups/hhcodinginterviewprep/)) can also be helpful, but it has a lot of variance in terms of content.
+- The [Hackathon Hackers](https://www.facebook.com/groups/hackathonhackers/) Facebook community and related pages ([HH Interview Experiences](https://www.facebook.com/groups/interviewexper/), [HH Coding Interview Prep](https://www.facebook.com/groups/hhcodinginterviewprep/)) can also be helpful
 - [Reddit's /r/CSCareerQuestions](https://www.reddit.com/r/cscareerquestions/) is a very useful career-focused community to learn from. However, in my experience the community there can be pretty toxic (think CollegeConfidential but for recruiting) at times so I recommend it in small doses.  
 - [Reddit's /r/learnprogramming](https://www.reddit.com/r/learnprogramming/) is a great community that can help you with anything in your CS career, not limited to recruiting
 
