@@ -14,7 +14,7 @@ We will be discussing the process of applying to companies and how to maximize y
 
 You might ask, "I want to apply to companies, but what if I'm not technically ready? I need time to prep interview skills/data structures/algorithms/etc" It's okay! Just start applying. The most important thing is to start. You will never feel like you are ready until you start applying. And there is no better motivation to prep interview questions like an actual interview deadline that is coming up! Also, how to prep technically coming in a later blog post!
 
-Getting positive responses is a mixture of sending out many applications and sending out quality applications; quantity and quality both matter. The best way to maximize your quantity is to start sending applications out as soon as possible. The bulk of the blog post wi
+Getting positive responses is a mixture of sending out many applications and sending out quality applications; quantity and quality both matter. The best way to maximize your quantity is to start sending applications out as soon as possible. The bulk of the rest of this blog post will detail some common (and uncommon)
 
 # Applying Online
 
