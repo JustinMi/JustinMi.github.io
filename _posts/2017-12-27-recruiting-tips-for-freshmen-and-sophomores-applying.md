@@ -6,6 +6,8 @@ date: 2017-12-27
 
 # Intro
 
+<This post is actively under construction. Check back in a week or two!>
+
 Recruiting for internships (and clubs, and research positions, and...) as a freshman or sophomore can be daunting at times. Where do you start? How do you apply? How do you maximize your chances of getting responses? How do you "do" a technical interview? This blog post will be the second in a series aimed at freshmen and sophomores that will hopefully answer those questions!
 
 We will be discussing the process of applying to companies and how to maximize your changes of getting a positive response to your application. 
