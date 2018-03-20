@@ -31,7 +31,7 @@ Multiple resources for aggregation:
   - LinkedIn job pages
   - Handshake
 
-Yes, applying online can be tedious. But there are ways to make things easier. If you have two screens, applying to companies on one screen while watching TV shows on another--sending out applicaitons won't be boring. If you want to be even more productive, you can watch lecture webcasts (but I prefer TV shows myself). Listening to podcasts is also a good way. 
+Yes, applying online can be tedious. But there are ways to make things easier. If you have two screens, applying to companies on one screen while watching TV shows on another--sending out applications won't be boring. If you want to be even more productive, you can watch lecture webcasts (but I prefer TV shows myself). Listening to podcasts is also a good way. 
 
 # Referrals Matter
 
