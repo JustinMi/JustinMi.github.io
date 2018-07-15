@@ -2,7 +2,7 @@ PWD /Users/justinmi/Google Drive/Cal/Projects/JustinMi.github.io/resume
 INPUT /usr/local/texlive/2016/texmf.cnf
 INPUT /usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT Justin-Mi-Resume.tex
+INPUT /Users/justinmi/Google Drive/Cal/Projects/JustinMi.github.io/resume/Justin-Mi-Resume.tex
 OUTPUT Justin-Mi-Resume.log
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
