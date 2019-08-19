@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Working with ROS"
+title: "Working with the Robot Operating System"
 date: 2017-05-21
 ---
 
