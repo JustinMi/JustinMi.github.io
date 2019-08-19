@@ -2,13 +2,30 @@
 layout: default
 title: Blog
 ---
-	<h1>Blog</h1>
-  <div class="blurb">
-    <p> This is a repository for various musings and thoughts I have about college, coding, music, and culture. There are also some tutorials thrown in here or there. </p>
-  </div>
-	<ul class="posts">
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+<h1>Blog</h1>
+<div class="blurb">
+  <p>
+    This is a repository for various musings and thoughts I have about college,
+    coding, music, and culture. There are also some tutorials thrown in here or
+    there.
+  </p>
+</div>
+<ul class="posts">
+  <li>
+    <span>03 July 2019</span> »
+    <a
+      href="https://medium.com/sep-berkeley/why-now-1aa88a128755"
+      title="Why Now? Using Trends to Your Career and Personal Advantage"
+      >Why Now? Using Trends to Your Career and Personal Advantage</a
+    >
+  </li>
+  {% for post in site.posts %}
+  <li>
+    <span>{{ post.date | date_to_string }}</span> »
+    <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{
+      post.title
+    }}</a>
+  </li>
+  {% endfor %}
+</ul>
