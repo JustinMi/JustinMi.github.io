@@ -1,53 +1,95 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- Favicon Stuff -->
-			<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/favicons/apple-touch-icon.png">
-			<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicons/favicon-32x32.png" sizes="32x32">
-			<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicons/favicon-16x16.png" sizes="16x16">
-			<link rel="manifest" href="{{ site.baseurl }}/assets/images/favicons/manifest.json">
-			<link rel="mask-icon" href="{{ site.baseurl }}/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-			<meta name="theme-color" content="#ffffff">
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <!-- Favicon Stuff -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ site.baseurl }}/assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ site.baseurl }}/assets/images/favicons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ site.baseurl }}/assets/images/favicons/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="manifest"
+      href="{{ site.baseurl }}/assets/images/favicons/manifest.json"
+    />
+    <link
+      rel="mask-icon"
+      href="{{ site.baseurl }}/assets/images/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/assets/css/main.css"
+    />
 
-			<!-- For the image carousel -->
-			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/slick-1.6.0/slick/slick.css"/>
-			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/slick-1.6.0/slick/slick-theme.css"/>
-		</head>
+    <!-- For the image carousel -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/assets/slick-1.6.0/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/assets/slick-1.6.0/slick/slick-theme.css"
+    />
+  </head>
 
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="{{ site.baseurl }}/">About</a></li>
-	        		<li><a href="{{ site.baseurl }}/teaching">Teaching</a></li>
-	        		<li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-	        		<li><a href="{{ site.baseurl }}/resume/Justin-Mi-Resume.pdf">Resume</a></li>
-	        		<li><a href="https://github.com/JustinMi">Github</a></li>
-	    		</ul>
-			</nav>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{{ site.baseurl }}/">About</a></li>
+        <li><a href="{{ site.baseurl }}/teaching">Teaching</a></li>
+        <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+      </ul>
+    </nav>
 
-			<div class="container">
-			
-			{{ content }}
-			
-			</div>
+    <div class="container">
+      {{ content }}
+    </div>
 
-			<footer>
-    		<ul>
-        		<li><a href="https://www.linkedin.com/in/justin-mi/">LinkedIn</a></li>
-        		<li><a href="https://github.com/JustinMi">Github</a></li>
-        		<li><a href="https://open.spotify.com/user/themieberlake">Spotify</a></li>
-				</ul>
-			</footer>
+    <footer>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/justin-mi/">LinkedIn</a></li>
+        <li><a href="https://github.com/JustinMi">Github</a></li>
+      </ul>
+    </footer>
 
-			<!-- Scripts for the image carousel -->
-			<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-			<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-			<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-			<script type="text/javascript" src="{{ site.baseurl }}/assets/slick-1.6.0/slick/slick.min.js"></script>
-			<script type="text/javascript" src="{{ site.baseurl }}/assets/js/carousel.js"></script>
-		</body>
-
-	</html>
+    <!-- Scripts for the image carousel -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{ site.baseurl }}/assets/slick-1.6.0/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{ site.baseurl }}/assets/js/carousel.js"
+    ></script>
+  </body>
+</html>
